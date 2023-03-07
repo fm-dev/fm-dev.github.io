@@ -49,13 +49,7 @@ Table of Content:
   margin: 0px;
   padding: 0px; }
 
-.card_scrolbar{
-  overflow: scroll;
-  height: 200px;
-}
-.card_scrolbar::-webkit-scrollbar {
-  display: none;
-}
+
 
 a {
   text-decoration: none;
