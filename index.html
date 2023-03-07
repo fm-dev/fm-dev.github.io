@@ -24,12 +24,14 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<style>
 		.card_scrolbar {
-			overflow: scroll;
+			
 			height: 200px;
 		}
-
-		.example::-webkit-scrollbar {
-			display: none;
+		.cardhidescroll{
+			overflow: hidden;
+		}
+		.cardhidescroll:hover{
+			display: scroll;
 		}
 	</style>
 </head>
@@ -338,7 +340,7 @@
 				</div>
 				<div class="col-lg-4 col-sm-6 web " style="min-height: 200px;">
 
-					<div class="feature_item card_scrolbar">
+					<div class="feature_item card_scrolbar cardhidescroll">
 
 						<h5 class="text-danger">Web Developer</h5>
 
@@ -416,7 +418,7 @@
 				</div>
 				<div class="col-lg-4 col-sm-6 editing">
 
-					<div class="feature_item card_scrolbar">
+					<div class="feature_item card_scrolbar ">
 
 						<h5 class="text-danger">Video Editing</h5>
 
