@@ -1,533 +1,346 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>MFA | Profile</title>
-	<meta name="description" content="Web profile">
-	<meta name="author" content="Muhammad Fajri Afriyansyah">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-	<!-- aos -->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-	<style>
-		.card_scrolbar {
-			
-			height: 200px;
-		}
-		.cardhidescroll{
-			overflow-y: hidden;
-		}
-		.cardhidescroll:hover{
-			overflow-y: scroll;
-		}
-	</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MFA | Profile</title>
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+              rel="stylesheet"
+              integrity=
+    "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+              crossorigin="anonymous">
 </head>
+  <body>
+    <!-- <section>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">MFA | Profile</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Portofolio</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </section> -->
+    <section>
+        <div class="col-12" style="width: 100%; height: 500px;  overflow: hidden; border: 1px solid black;">
+            <img class="img-fluid" src="assets/img/backgraound.jpg" style="display: inline; width: 100%; height: 100%;" alt="">
+        </div>
+        <style>
+            .image-cropper {
+                width: 200px;
+                height: 200px;
+                margin-top: -5%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+            .profile-pic {
+            display: inline;
+            margin: 0 auto;
+            margin-left: -10%;
+            margin-top: -15%;
+            height: 230px;
+            width: 230px;
+            }
+            @media screen and (max-width: 992px) {
+                .profileNegativeMargin {
+                    margin-top: -30%;
+                }
+                .textProfile{
+                    text-align: center;
+                }
+            }
+            @media screen and (min-width: 993px) {
+                .profileNegativeMargin {
+                    margin-top: -7%;
+                }
+            }
+        </style>
+        <!-- <div class="image-cropper ms-5 shadow-lg" data-anijs="if: mouseover, do: wobble animated">
+            <img src="assets/img/bandunhitam.jpg" alt="avatar" class="profile-pic" >
+        </div> -->
+        <div class="d-flex flex-column flex-lg-row flex-md-column col-12">
+            <div class="col-lg-2    d-flex justify-content-center p-5 mt-n5 profileNegativeMargin"  >
+                <div class="  overflow-hidden rounded-circle position-relative " style="border: 7px solid white; "  data-anijs="if: mouseover, do: wobble animated">
+                    <img src="assets/img/bandunhitam.jpg" alt="avatar" class="img-fluid"   >  
+                </div>
+            </div>
+            <div class=" col-lg-7 col-md-12 d-flex flex-column  p-2 textProfile" >
+                <h1 class="text-dark fw-bold">Muhammad Fajri Afriyansyah</h1>
+                <p class="text-secondary">Software developer, Web Developer, Android Developer<span>&#9997;</span></p>
+            </div>
+            <!-- ini inforamsi personal -->
+            <div class="col-3 d-md-none d-lg-block d-none">
+                <div class="d-flex flex-column text-secondary mt-3">
+                    <a><img src="assets/img/envelope-at.svg" alt=""> fajri20ti@mahasiswa.pcr.ac.id</a>
+                    <a><img src="assets/img/whatsapp.svg" alt=""> 085263676114</a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-lg-row flex-md-column flex-column">
+            <div class=" col-lg-9 col-md-12 ">
+                <div class="d-flex flex-column m-5 " >
+                    <div class="d-flex flex-row">
+                        <h1 class="fw-bold">I'm a </h1>
+                        <h1 class="bg-dark p-2 rounded text-light mx-2" data-anijs="if: mouseover, do: bounce animated"> Software Developer</h1>
+                    </div>
+                    <p class="mt-3">
+                        I am a software developer who specializes in creating 
+                        innovative software solutions. I am proficient in various 
+                        programming languages and excel at solving complex problems. 
+                        I am always enthusiastic about continuous learning and adapting 
+                        to the latest technologies.
+                    </p>
+                    <!-- <div class="d-flex flex-row">
+                        <button class="btn btn-light " data-anijs="if: click, do: bounceIn animated">Profile</button>
+                        <button class="btn btn-dark mx-2" data-anijs="if: click, do: bounceIn animated">Project</button>
+                    </div> -->
+                </div>
+                <div class="d-flex flex-column m-5">
+                    <h4 class="text-secondary fw-bold">My Skill</h4>
+                    <div class="mt-3 d-flex flex-wrap ">
+                        <div class="d-flex flex-column align-items-center col-2 m-2 ">
+                            <img src="assets/img/python.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/mysql-original-wordmark.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/laravel.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/php.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/codeigniter-plain-wordmark.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/react.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Beginner</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/golang (1).svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Beginner</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/kotlin-original.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Beginner</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/java-original.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/javascript-js.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/android-studio.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center col-2 m-2">
+                            <img src="assets/img/Csharp_Logo.png" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
+                            <p class="text-secondary text-center">Intermediate</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="d-flex flex-column m-5">
+                    <h4 class="fw-bold text-secondary">Carear</h4>
+                    <div class="d-flex flex-column col-12">
+                        <img src="assets/img/lowongan_2022317145039.png" class="col-2 img-fluid mt-3 mb-3">
+                        <div class="d-flex flex-row">
+                            <div class="d-flex flex-column">
+                                <small>Status</small>
+                                <h5 class="text-secondary">Student</h5>
+                            </div>
+                            <div class="d-flex flex-column mx-3">
+                                <small>Time</small>
+                                <h5 class="text-secondary">2020 - Now</h5>
+                            </div>
+                        </div>
+                        <p>
+                            I am a seventh-semester student majoring in Computer Engineering at Politeknik Caltex Riau, with a strong understanding of programming, computer networking, and information security. My academic record is marked by high grades, and I have gained practical experience through internships and projects. I aspire to pursue a successful career in the IT industry, leveraging my programming skills and deep technological knowledge to achieve even greater success.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column col-12">
+                        <img src="assets/img/logo-1655705615 (1).png" class="col-2 img-fluid mt-3 mb-3">
+                        <div class="d-flex flex-row">
+                            <div class="d-flex flex-column">
+                                <small>Status</small>
+                                <h5 class="text-secondary">Internship</h5>
+                            </div>
+                            <div class="d-flex flex-column mx-3">
+                                <small>Time</small>
+                                <h5 class="text-secondary">March - July <small class="text-secondary">(2023)</small></h5>
+                            </div>
+                        </div>
+                        <p>
+                            During my internship at PT. Inovindo Digital Media, I worked as a PHP web developer using the Laravel framework. I was involved in web development projects and contributed to coding, debugging, and collaborating with the team to ensure smooth performance. This experience deepened my understanding of web development and enhanced my practical skills.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="pe-2">
+                    <div class="">
+                        <h3 class="p-2 bg-dark text-light fw-bold rounded text-center">
+                            My Project
+                        </h3>
+                    </div>
+                    <div class="mb-5">
+                       
+                        <div class="d-flex flex-row">
+                            <div class="col-3 d-flex align-items-center justify-content-center" >
+                                <img src="assets/img/laravel.svg" class="img-fluid" width="70vw">
+                            </div>
+                            <div class="col-9 d-flex flex-column">
 
-<body>
+                                <h5 class="">Website Task Managment inovindo academy</h5>
+                                <small class="text-secondary">Technologies</small>
+                                <p class="text-secondary">Laravel, JavaScript, PHP</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-3 d-flex align-items-center justify-content-center" >
+                                <img src="assets/img/laravel.svg" class="img-fluid" width="70vw">
+                            </div>
+                            <div class="col-9 d-flex flex-column">
 
-	<!--================Header Menu Area =================-->
-	<header class="header_area">
-		<div class="main_menu" id="mainNav">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container box_1620">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h " style="font-weight: bold; color: #913831;" href="index.html">MFA</a>
-					<button class="navbar-toggler " type="button" data-toggle="collapse"
-						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="#beranda">Beranda</a></li>
-							<li class="nav-item"><a class="nav-link" href="#tentang_saya">Tentang saya</a></li>
-							<li class="nav-item"><a class="nav-link" href="#Portofolio">Portofolio</a>
-							<li class="nav-item"><a class="nav-link" href="#Pengalaman">Pengalaman</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================Header Menu Area =================-->
+                                <h5 class="">Website CMS Profile inovindo academy</h5>
+                                <small class="text-secondary">Technologies</small>
+                                <p class="text-secondary">Laravel, JavaScript, PHP</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-3 d-flex align-items-center justify-content-center" >
+                                <img src="assets/img/codeigniter-plain-wordmark.svg" class="img-fluid" width="70vw">
+                            </div>
+                            <div class="col-9 d-flex flex-column">
 
-	<!--================Home Banner Area =================-->
-	<section class="home_banner_area" id="beranda">
-		<div class="banner_inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="home_left_img">
-							<img src="img/profile/fajri2-transformed.png" alt="" width="500px" data-aos="fade-up-right">
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="banner_content">
-							<h5>Perkenalkan saya</h5>
-							<h2 id="app"></h2>
-							<a class="banner_btn" href="#">Downdload CV</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Home Banner Area =================-->
+                                <h5 class="">Website providing information about damaged roads in the city of Pekanbaru using Geographic Information System (GIS)</h5>
+                                <small class="text-secondary">Technologies</small>
+                                <p class="text-secondary">Codeigniter, leaflet</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-3 d-flex align-items-center justify-content-center" >
+                                <img src="assets/img/Csharp_Logo.png" class="img-fluid" width="72vw">
+                            </div>
+                            <div class="col-9 d-flex flex-column">
 
-	<!--================Welcome Area =================-->
-	<section class="welcome_area p_120" id="tentang_saya">
-		<div class="container">
-			<div class="row welcome_inner">
-				<div class="col-lg-6">
-					<div class="welcome_text">
-						<h4>Tentang Saya</h4>
-						<p>Mengampu pendidikan di Politeknik
-							Caltex Riau yang antusias dan
-							bermotivasi tinggi dengan kemampuan inisiatif,
-							bertanggung jawab dan mau belajar hal
-							baru. Berpengalaman dalam membuat
-							website seperti menguasai beberapa
-							bahasa pemrograman seperti java, php,
-							vb,net dan C#</p>
-					</div>
-				</div>
-				<div class="col-lg-6 ">
-					<div class="tools_expert ">
-						<h3>Keahlian</h3>
-						<div class="skill_main">
-							<div class="skill_item">
-								<h4>Web Developer <span class="counter">85</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85"
-										aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-							<div class="skill_item ">
-								<h4>Android Developer <span class="counter">60</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>UI/UX <span class="counter">80</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>Desktop Developer <span class="counter">75</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>Video Editing <span class="counter">75</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Welcome Area =================-->
+                                <h5 style="text-transform:capitalize ;">Rental System
+                                    Tourist Bus Desktop-Based</h5>
+                                <small class="text-secondary">Technologies</small>
+                                <p class="text-secondary">C#</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-3 d-flex align-items-center justify-content-center" >
+                                <img src="assets/img/android-studio.svg" class="img-fluid" width="70vw">
+                            </div>
+                            <div class="col-9 d-flex flex-column">
 
-	<!--================Feature Area =================-->
-	<section class="feature_area p_120" id="Portofolio">
-		<div class="container">
-			<div class="main_title">
-				<h2>Portofolio</h2>
-			</div>
-			<div class="feature_inner row">
-				<div class="col-lg-6 col-md-6" style="height: 100%;">
-					<div class="feature_item ">
-						<div class="d-flex flex-lg-row flex-column">
-							<img src="img/profile/picture2.png" width="150rem" class=" w-auto"
-								data-aos="flip-right"></img>
-							<h2 id="app2" class="text-danger mt-5"></h2>
+                                <h5 style="text-transform:capitalize ;">Mobile-Based Shoe Store Application Using Android Studio</h5>
+                                <small class="text-secondary">Technologies</small>
+                                <p class="text-secondary">Kotlin , Android Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-4" style="">
+                <div class="d-flex " style=" height:30vh;" >
+                    <img src="assets/img/bandunhitam.JPG"  class="img-fluid ms-n3" style="margin-left: -10vh;" >
+                </div>
+                
+            </div> -->
+        </div>
+    </section>
+    <!-- <footer class="bg-dark p-5">
+           <div class="d-flex flex-row m-5 justify-content-center">
+                <div class="d-flex flex-column text-light textProfile">
+                    <div class=" text-center">
+                        <h4 class="text-light fw-bold">Contact me <span>&#128516;</span></h4>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="d-flex flex-column text-center mx-2">
+                            <small class="text-light">E-mail</small>
+                            <a>fajri20ti@mahasiswa.pcr.ac.id</a>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <small class="text-light">linkedin</small>
+                            <a class="link-offset-2 link-underline link-underline-opacity-0 text-light" href="https://shorturl.at/wCIY6"  data-anijs="if: mouseover, do: pulse animated">https://shorturl.at/wCIY6</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+           </div>
+    </footer> -->
+    <!-- <section class="mt-5">
+        <div class="card">
+            <h1 class="text-center fw-bold">Profile</h1>
+            <div class="d-flex flex-row m-5">
+                <div class="col-4 ">
+                    <h3 class="fw-bold">About me</h3>
+                    <p>
+                        I am a software developer who specializes in creating 
+                        innovative software solutions. I am proficient in various 
+                        programming languages and excel at solving complex problems. 
+                        I am always enthusiastic about continuous learning and adapting 
+                        to the latest technologies.
+                    </p>
+                </div>
+                <div class="col-4 d-flex justify-content-center" style="border: 1px solid black;">
+                    
+                    
+                </div>
+                <div class="col-4">
+                    <div class="d-flex flex-column">
+                        <h3 class="fw-bold">Detail</h3>
+                        <h4 class="fw-bold mt-3">Name</h4>
+                        <h5>Muhammad Fajri Afriyansyah</h5>
+                        <h4 class="fw-bold">Location</h4>
+                        <h5>Pekanbaru, Riau</h5>
+                        <div class="d-flex flex-row">
 
-						</div>
-						<div class="feature_item ">
-							<div class="d-flex flex-column">
-								<h1 class="text-light badge-danger rounded p-3">Web Developer</h1>
-								<h3 id="app2" class="text-danger mt-5">Pendidikan</h3>
-								<hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- AniJS core library -->
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+  
+    <!-- Include to use $addClass, $toggleClass or $removeClass -->
+    <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
 
-								<ul class="text-dark">
-									<li>2020-2024
-										<h5>Politeknik Caltex Riau | <span>
-												<p>D4 teknik Informatika</p>
-											</span></h5>
-									</li>
-									<li>2016-2018
-										<h5>SMAN 3 Mandau | <span>
-												<p>Jurusan IPA</p>
-											</span></h5>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="feature_item">
-						<div class="d-flex flex-column">
-							<i class=""><img src="img/elements/teamwork.png" width="50rem" /></i>
-							<h1 class="text-danger">Organisasi</h1>
-							<hr>
-
-							<ul class="text-dark">
-								<li>
-									<h5>Caltex Techno Scientist |</h5>
-									<p>Mentoring training web developer</p>
-								</li>
-								<li>
-									<h5>Musyawarah Besar ITSA |</h5>
-									<p>Anggota TCS (Timeline Coordinator System)</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="feature_item">
-						<div class="feature_item">
-
-							<i class=""><img src="img/elements/skill.png" width="50rem" /></i>
-							<h2 class="text-danger">Skill</h2>
-							<ul>
-								<li>
-									<h3 class="text-dark">Web Developer</h3>
-									<p>Hal yang saya kuasai dalam Web Development adalah HTML, Simantic HTML, CSS,
-										JavaScript, PHP, codeigniter, Laravel
-										, JSP, ASP.NET, VB.NET, API
-									</p>
-								</li>
-								<li class="mt-3">
-									<h3 class="text-dark">Android Developer</h3>
-									<p>Hal yang saya kuasai di bidang adroid Developer adalah Android studio, kotlin dan
-										java</p>
-								</li>
-								<li class="mt-3">
-									<h3 class="text-dark">UI/UX</h3>
-									<p>Platform yang saya pakai dalam bidang UI/UX dalah figma dan adobeXD</p>
-								</li>
-								<li class="mt-3">
-									<h3 class="text-dark">Desktop Developer</h3>
-									<p>Hal yang saya kuasai dalam bidang Desktop Developer adalah bahasa program C#</p>
-								</li>
-								<li class="mt-3">
-									<h3 class="text-dark">Video Editing</h3>
-									<p>Platform atau aplikasi yang saya pakai adalah Adobe primere pro dan Adobe After
-										Efect</p>
-								</li>
-							</ul>
-						</div>
-						<div class="mt-5 feature_item">
-							<i class=""><img src="img/elements/briefing.png" width="50rem" /></i>
-							<h2 class="text-danger">Project</h2>
-							<ul class="text-dark">
-								<li>September 2020 - January 2023
-									<h5>Sistem Informasi Pelayanan dan Pengelolaan
-										Data Supir | <span>
-										</span></h5>
-									<ul>
-										<li>perancangan project</li>
-										<li>impementasi project menggunakan ASP.NET</li>
-										<li>Impelementasi Data base menggunakan
-											oracle</li>
-									</ul>
-								</li>
-								<li class="mt-2">October 2020 - January 2023
-									<h5>Pembuatan Web GIS Informasi Kemacetan di
-										Daerah Kota Pekanbaru |</h5>
-									<ul>
-										<li>Membuat perancangan Proposal Project</li>
-										<li>Survei lapangan</li>
-										<li>Implementasi project menggunakan
-											framework CI3
-										</li>
-										<li>Implementasi leaeat ke dalam project
-										</li>
-									</ul>
-								</li>
-								<li class="mt-2">June 2022 - oktober 2023|
-									<h5>Website Penyedia Pelayanana Service Rumahan
-										(E-commerce)
-										|</h5>
-									<ul>
-										<li>Perancangan project berbasis website</li>
-										<li>Implementasi terhadap project
-											menggunakan CI3</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-					</li>
-
-					</ul>
-				</div>
-			</div>
-		</div>
-		</div>
-	</section>
-	<!--================End Feature Area =================-->
-
-	<!--================Projects Area =================-->
-	<section class="projects_area p_120 " id="Pengalaman">
-		<div class="container">
-			<div class="main_title">
-				<h2 class="text-danger">Pengalaman</h2>
-				<p>Berikut beberapa kemamapuan yang sudah saya punyai sejauh ini</p>
-			</div>
-			<div class="projects_fillter">
-				<ul class="filter list">
-					<li class="active" data-filter="*"><a href="#">All Categories</a></li>
-					<li data-filter=".android"><a href="#">Android Developer</a></li>
-					<li data-filter=".web"><a href="#">Web Developer </a></li>
-					<li data-filter=".desktop"><a href="#">Desktop Developer</a></li>
-					<li data-filter=".editing"><a href="#">Video Editing</a></li>
-				</ul>
-			</div>
-			<div class="projects_inner row">
-				<div class="col-lg-4 col-sm-6 android  ">
-					<div class="feature_item">
-
-						<div class="projects_text">
-
-							<h5 class="text-danger">Android Developer</h5>
-
-
-
-							<div class="skill_main">
-								<a>Android Studio <span class="counter">50</span>%</a>
-								<div class="progress">
-									<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-							<div class="skill_main">
-								<a>Kotlin <span class="counter">70</span>%</a>
-								<div class="progress">
-									<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 web " style="min-height: 200px;">
-
-					<div class="feature_item card_scrolbar cardhidescroll">
-
-						<h5 class="text-danger">Web Developer</h5>
-
-
-
-						<div class="skill_main">
-							<a>HTML <span class="counter">97</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>CSS <span class="counter">85</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>Javasript <span class="counter">70</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>PHP <span class="counter">89</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>JSP <span class="counter">80</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>Codeigniter <span class="counter">90</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>Laravel <span class="counter">20</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 desktop">
-
-					<div class="feature_item card_scrolbar">
-
-						<h5 class="text-danger">Desktop Developer</h5>
-
-
-
-						<div class="skill_main">
-							<a>C# <span class="counter">70</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 editing">
-
-					<div class="feature_item card_scrolbar ">
-
-						<h5 class="text-danger">Video Editing</h5>
-
-
-
-						<div class="skill_main">
-							<a>Adobe Primere Pro <span class="counter">80</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_main">
-							<a>Adobe After Effect <span class="counter">70</span>%</a>
-							<div class="progress">
-								<div class="progress-bar" style="background-color: #913831;" role="progressbar"
-									aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-	<!--================End Projects Area =================-->
-
-
-	<!--================Footer Area =================-->
-	<footer class="footer_area p_120">
-		<div class="container align-content-end">
-			<div class="row footer_inner">
-				<div class="col-lg-5 col-sm-6">
-					<aside class="f_widget ab_widget">
-						<div class="f_title">
-							<h3>quotes from me</h3>
-						</div>
-						<p>Jangan lah berharap menjadi terbaik, tetapi lakukan lah yang terbaik dari yang terbaik kita
-							miliki. Ingat
-							hasil adalah bonus nya dan jangan kecewa </p>
-
-					</aside>
-				</div>
-
-				<div class="col-lg-2">
-					<aside class="f_widget social_widget">
-						<div class="f_title">
-							<h3>Follow Me</h3>
-						</div>
-						<ul class="list">
-							<li><a href="https://www.instagram.com/fajriafriyansyah_/"><i
-										class="fa fa-instagram"></i></a></li>
-							<li><a href="https://wa.me/6285263676114"><i class="fa fa-whatsapp"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah"><i
-										class="fa fa-linkedin"></i></a></li>
-
-						</ul>
-					</aside>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!--================End Footer Area =================-->
-
-
-
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/theme.js"></script>
-	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-	<script type="text/javascript">
-		var app = document.getElementById('app');
-		var app2 = document.getElementById('app2');
-
-		var typewriter = new Typewriter(app, {});
-
-		typewriter.typeString('Muhammad Fajri Afriyansyah')
-			.pauseFor(2500)
-			.start();
-		var typewriter2 = new Typewriter(app2, {});
-
-		typewriter2.typeString('Muhammad Fajri Afriyansyah')
-			.pauseFor(2500)
-			.start();
-	</script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
