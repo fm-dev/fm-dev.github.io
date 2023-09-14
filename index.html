@@ -13,162 +13,166 @@
               integrity=
     "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
               crossorigin="anonymous">
+              <style>
+                .image-cropper {
+                    width: 200px;
+                    height: 200px;
+                    margin-top: -5%;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                }
+                .profile-pic {
+                    display: inline;
+                    margin: 0 auto;
+                    margin-left: -10%;
+                    margin-top: -15%;
+                    height: 230px;
+                    width: 230px;
+                }
+                .gambarLatarProfile{
+                    width: 100%; height: 500px;  overflow: hidden;
+                }
+                @media screen and (max-width: 992px) {
+                    .profileNegativeMargin {
+                        margin-top: -30%;
+    
+                    }
+                    .textProfile{
+                        text-align: center;
+                    }
+                    .gambarLatarProfile{
+                        height: 200px;
+                    }
+                }
+                @media screen and (min-width: 993px) {
+                    .profileNegativeMargin {
+                        margin-top: -18%;
+                    }
+                }
+            </style>
 </head>
   <body>
-    <!-- <section>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">MFA | Profile</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Portofolio</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-        </nav>
-    </section> -->
     <section>
-        <div class="col-12" style="width: 100%; height: 500px;  overflow: hidden; border: 1px solid black;">
+        <div  class="col-12 gambarLatarProfile">
             <img class="img-fluid" src="assets/img/backgraound.jpg" style="display: inline; width: 100%; height: 100%;" alt="">
         </div>
-        <style>
-            .image-cropper {
-                width: 200px;
-                height: 200px;
-                margin-top: -5%;
-                position: relative;
-                overflow: hidden;
-                border-radius: 50%;
-            }
-            .profile-pic {
-            display: inline;
-            margin: 0 auto;
-            margin-left: -10%;
-            margin-top: -15%;
-            height: 230px;
-            width: 230px;
-            }
-            @media screen and (max-width: 992px) {
-                .profileNegativeMargin {
-                    margin-top: -30%;
-                }
-                .textProfile{
-                    text-align: center;
-                }
-            }
-            @media screen and (min-width: 993px) {
-                .profileNegativeMargin {
-                    margin-top: -7%;
-                }
-            }
-        </style>
+
         <!-- <div class="image-cropper ms-5 shadow-lg" data-anijs="if: mouseover, do: wobble animated">
             <img src="assets/img/bandunhitam.jpg" alt="avatar" class="profile-pic" >
         </div> -->
-        <div class="d-flex flex-column flex-lg-row flex-md-column col-12">
-            <div class="col-lg-2    d-flex justify-content-center p-5 mt-n5 profileNegativeMargin"  >
+        <div class="d-flex flex-column    col-8 mx-auto"  >
+            <div class="col-lg-3 col-8 d-flex align-content-center  mx-auto profileNegativeMargin" >
                 <div class="  overflow-hidden rounded-circle position-relative " style="border: 7px solid white; "  data-anijs="if: mouseover, do: wobble animated">
                     <img src="assets/img/bandunhitam.jpg" alt="avatar" class="img-fluid"   >  
                 </div>
             </div>
-            <div class=" col-lg-7 col-md-12 d-flex flex-column  p-2 textProfile" >
+            <div class=" col-12 d-flex flex-column  p-2 textProfile text-center" >
                 <h1 class="text-dark fw-bold">Muhammad Fajri Afriyansyah</h1>
                 <p class="text-secondary">Software developer, Web Developer, Android Developer<span>&#9997;</span></p>
             </div>
-            <!-- ini inforamsi personal -->
-            <div class="col-3 d-md-none d-lg-block d-none">
-                <div class="d-flex flex-column text-secondary mt-3">
-                    <a><img src="assets/img/envelope-at.svg" alt=""> fajri20ti@mahasiswa.pcr.ac.id</a>
-                    <a><img src="assets/img/whatsapp.svg" alt=""> 085263676114</a>
+        </div>
+        <div class="d-flex flex-row justify-content-center col-lg-5 col-10 mx-auto my-3">
+            <div class=" p-2 col-lg-1 col-2 col-md-1">
+                <div class="" data-anijs="if: mouseover, do: swing animated">
+                    <a href="#">
+
+                        <img src="assets/img/instagram.1024x1024.png" class="img-fluid" />
+                    </a>
+
+                </div>
+            </div>
+            <div class=" p-2 col-lg-1 col-2 col-md-1">
+                <div class="" data-anijs="if: mouseover, do: swing animated">
+                    <a href="#">
+
+                        <img src="assets/img/linkedin-original.1024x1024.png" class="img-fluid" />
+                    </a>
+
+                </div>
+            </div>
+            <div class=" p-2 col-lg-1 col-2 col-md-1">
+                <div class="" data-anijs="if: mouseover, do: swing animated">
+                    <a href="#">
+
+                        <img src="assets/img/github-square.1023x1024.png" class="img-fluid" />
+                    </a>
+
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-lg-row flex-md-column flex-column">
-            <div class=" col-lg-9 col-md-12 ">
-                <div class="d-flex flex-column m-5 " >
-                    <div class="d-flex flex-row">
-                        <h1 class="fw-bold">I'm a </h1>
-                        <h1 class="bg-dark p-2 rounded text-light mx-2" data-anijs="if: mouseover, do: bounce animated"> Software Developer</h1>
+        <div class="d-flex flex-column">
+            <div class=" col-12 d-flex justify-content-center flex-column ali  " >
+                <div class="card p-2 col-10 col-lg-5 d-flex flex-column  text-center mx-auto">
+                    <div class="card-body  " >
+                        <div class=" text-center mt-2"  data-anijs="if: mouseover, do: bounceIn animated">
+                            <h1 class="fw-bold fs-5">I'm a <span class="" >Software Developer</span></h1>
+                        </div>
+                        <p class="mt-3">
+                            I am a software developer who specializes in creating 
+                            innovative software solutions. I am proficient in various 
+                            programming languages and excel at solving complex problems. 
+                            I am always enthusiastic about continuous learning and adapting 
+                            to the latest technologies.
+                        </p>
+                        <!-- <div class="d-flex flex-row">
+                            <button class="btn btn-light " data-anijs="if: click, do: bounceIn animated">Profile</button>
+                            <button class="btn btn-dark mx-2" data-anijs="if: click, do: bounceIn animated">Project</button>
+                        </div> -->
                     </div>
-                    <p class="mt-3">
-                        I am a software developer who specializes in creating 
-                        innovative software solutions. I am proficient in various 
-                        programming languages and excel at solving complex problems. 
-                        I am always enthusiastic about continuous learning and adapting 
-                        to the latest technologies.
-                    </p>
-                    <!-- <div class="d-flex flex-row">
-                        <button class="btn btn-light " data-anijs="if: click, do: bounceIn animated">Profile</button>
-                        <button class="btn btn-dark mx-2" data-anijs="if: click, do: bounceIn animated">Project</button>
-                    </div> -->
                 </div>
-                <div class="d-flex flex-column m-5">
-                    <h4 class="text-secondary fw-bold">My Skill</h4>
-                    <div class="mt-3 d-flex flex-wrap ">
-                        <div class="d-flex flex-column align-items-center col-2 m-2 ">
-                            <img src="assets/img/python.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                <div class="col-10 col-lg-5 d-flex flex-column mx-auto mt-3 ">
+                    <h4 class="text-secondary fw-bold text-center">My Skill</h4>
+                    <div class="mt-3 d-flex flex-wrap justify-content-center  ">
+                        <div class="d-flex flex-column align-items-center col-3 m-2  p-1 col-lg-1 col-md-1">
+                            <img class="img-fluid" src="assets/img/python.svg" data-anijs="if: mouseover, do: pulse animated"/>
+                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/mysql-original-wordmark.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img class="img-fluid" src="assets/img/mysql-original-wordmark.svg" data-anijs="if: mouseover, do: pulse animated"/>
+                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/laravel.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img class="img-fluid" src="assets/img/laravel.svg" data-anijs="if: mouseover, do: pulse animated"/>
+                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/php.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img src="assets/img/php.svg" data-anijs="if: mouseover, do: pulse animated"/>
+                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/codeigniter-plain-wordmark.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img  src="assets/img/codeigniter-plain-wordmark.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                          
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/react.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Beginner</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img src="assets/img/react.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                            
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/golang (1).svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Beginner</p>
+
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img src="assets/img/kotlin-original.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                            
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/kotlin-original.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Beginner</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img src="assets/img/java-original.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                          
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/java-original.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
+                            <img src="assets/img/javascript-js.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                          
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/javascript-js.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
+                        <!-- <div class="d-flex flex-column align-items-center col-3  p-1 ">
+                            <img src="assets/img/android-studio.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                          
                         </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/android-studio.svg" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-2 m-2">
-                            <img src="assets/img/Csharp_Logo.png" width="70vw" data-anijs="if: mouseover, do: pulse animated"/>
-                            <p class="text-secondary text-center">Intermediate</p>
-                        </div>
+                        <div class="d-flex flex-column align-items-center col-3  p-1 ">
+                            <img src="assets/img/Csharp_Logo.png" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
+                          
+                        </div> -->
                        
                     </div>
                 </div>
-                <div class="d-flex flex-column m-5">
+                <!-- <div class="d-flex flex-column m-5">
                     <h4 class="fw-bold text-secondary">Carear</h4>
                     <div class="d-flex flex-column col-12">
                         <img src="assets/img/lowongan_2022317145039.png" class="col-2 img-fluid mt-3 mb-3">
@@ -203,9 +207,9 @@
                         </p>
                     </div>
                     
-                </div>
+                </div> -->
             </div>
-            <div class="col-lg-3 col-md-12">
+            <!-- <div class="col-lg-3 col-md-12">
                 <div class="pe-2">
                     <div class="">
                         <h3 class="p-2 bg-dark text-light fw-bold rounded text-center">
@@ -272,7 +276,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="col-4" style="">
                 <div class="d-flex " style=" height:30vh;" >
                     <img src="assets/img/bandunhitam.JPG"  class="img-fluid ms-n3" style="margin-left: -10vh;" >
@@ -342,5 +346,5 @@
     <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
