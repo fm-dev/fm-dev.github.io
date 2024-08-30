@@ -1,408 +1,529 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MFA | Profile</title>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Muhammad Fajri Afriyansyah</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Steller main styles -->
+	<link rel="stylesheet" href="assets/css/steller.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link href=
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-              rel="stylesheet"
-              integrity=
-    "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-              crossorigin="anonymous">
-              <style>
-                .image-cropper {
-                    width: 200px;
-                    height: 200px;
-                    margin-top: -5%;
-                    position: relative;
-                    overflow: hidden;
-                    border-radius: 50%;
-                }
-                .profile-pic {
-                    display: inline;
-                    margin: 0 auto;
-                    margin-left: -10%;
-                    margin-top: -15%;
-                    height: 230px;
-                    width: 230px;
-                }
-                .gambarLatarProfile{
-                    width: 100%; height: 500px;  overflow: hidden;
-                }
-                @media screen and (max-width: 992px) {
-                    .profileNegativeMargin {
-                        margin-top: -30%;
-    
-                    }
-                    .textProfile{
-                        text-align: center;
-                    }
-                    .gambarLatarProfile{
-                        height: 200px;
-                    }
-                }
-                @media screen and (min-width: 993px) {
-                    .profileNegativeMargin {
-                        margin-top: -18%;
-                    }
-                }
-            </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-  <body>
-    <section>
-        <div  class="col-12 gambarLatarProfile">
-            <img class="img-fluid" src="assets/img/backgraound.jpg" style="display: inline; width: 100%; height: 100%;" alt="">
-        </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-        <!-- <div class="image-cropper ms-5 shadow-lg" data-anijs="if: mouseover, do: wobble animated">
-            <img src="assets/img/bandunhitam.jpg" alt="avatar" class="profile-pic" >
-        </div> -->
-        <div class="d-flex flex-column    col-8 mx-auto"  >
-            <div class="col-lg-3 col-8 d-flex align-content-center  mx-auto profileNegativeMargin" >
-                <div class="  overflow-hidden rounded-circle position-relative " style="border: 7px solid white; "  data-anijs="if: mouseover, do: wobble animated">
-                    <img src="assets/img/bandunhitam.JPG" alt="avatar" class="img-fluid"   >  
-                </div>
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Testmonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="- btn btn-primary rounded ml-4" href="components.html">Copmonents</a>
+                    </li> -->
+                </ul>
             </div>
-            <div class=" col-12 d-flex flex-column  p-2 textProfile text-center" >
-                <h1 class="text-dark fw-bold">Muhammad Fajri Afriyansyah</h1>
-                <p class="text-secondary">Software developer, Web Developer, Android Developer<span>&#9997;</span></p>
-            </div>
-        </div>
-        <div class="d-flex flex-row justify-content-center col-lg-5 col-10 mx-auto my-3">
-            <div class=" p-2 col-lg-1 col-2 col-md-1">
-                <div class="" data-anijs="if: mouseover, do: swing animated">
-                    <a href="#">
+        </div>          
+    </nav>
+    <!-- End of page navibation -->
 
-                        <img src="assets/img/instagram.1024x1024.png" class="img-fluid" />
-                    </a>
+    <!-- Page Header -->
+        <header class="header" id="home">
+        <div class="container">
+            <div class="infos" data-aos="zoom-in">
+                <h6 class="subtitle">hello,I'm</h6>
+                <h6 class="title">Muhammad Fajri </h6>
+                <p>Programmer</p>
 
+                <div class="buttons pt-3">
+                    <button class="btn btn-light rounded">HIRE ME</button>
+                    <button class="btn btn-dark rounded">DOWNLOAD CV</button>
+                </div>      
+
+                <div class="socials mt-4">
+                    <a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank" class="social-item" href="javascript:void(0)"><i class="ti-linkedin"></i></a>
+                    <a href="mailto:fajriafriyansyah1441h@gmail.com" class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
+                    <a href="https://github.com/fm-dev" target="_blank" class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
+                    <a href="https://www.instagram.com/fajriafriyansyah_/" target="_blank" class="social-item" href="javascript:void(0)"><i class="ti-instagram"></i></a>
                 </div>
-            </div>
-            <div class=" p-2 col-lg-1 col-2 col-md-1">
-                <div class="" data-anijs="if: mouseover, do: swing animated">
-                    <a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah-b027a820b">
-
-                        <img src="assets/img/linkedin-original.1024x1024.png" class="img-fluid" />
-                    </a>
-
-                </div>
-            </div>
-            <div class=" p-2 col-lg-1 col-2 col-md-1">
-                <div class="" data-anijs="if: mouseover, do: swing animated">
-                    <a href="#">
-
-                        <img src="assets/img/github-square.1023x1024.png" class="img-fluid" />
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="d-flex flex-column">
-            <div class=" col-12 d-flex justify-content-center flex-column ali  " >
-                <div class="card p-2 col-10 col-lg-5 d-flex flex-column  text-center mx-auto">
-                    <div class="card-body  " >
-                        <div class=" text-center mt-2"  data-anijs="if: mouseover, do: bounceIn animated">
-                            <h1 class="fw-bold fs-5">I'm a <span class="" >Software Developer</span></h1>
-                        </div>
-                        <p class="mt-3">
-                            I am a software developer who specializes in creating 
-                            innovative software solutions. I am proficient in various 
-                            programming languages and excel at solving complex problems. 
-                            I am always enthusiastic about continuous learning and adapting 
-                            to the latest technologies.
-                        </p>
-                        <!-- <div class="d-flex flex-row">
-                            <button class="btn btn-light " data-anijs="if: click, do: bounceIn animated">Profile</button>
-                            <button class="btn btn-dark mx-2" data-anijs="if: click, do: bounceIn animated">Project</button>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-10 col-lg-5 d-flex flex-column mx-auto mt-3 ">
-                    <div data-anijs="if: mouseover, do: bounceIn animated">
-                        <h4 class="text-secondary fw-bold text-center">My Skill</h4>
-                    </div>
-                    <div class="d-flex flex-wrap justify-content-center">
-                        <div class="d-flex flex-column align-items-center col-3 m-2  p-1 col-lg-1 col-md-1">
-                            <img class="img-fluid" src="assets/img/python.svg" data-anijs="if: mouseover, do: pulse animated"/>
-                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img class="img-fluid" src="assets/img/mysql-original-wordmark.svg" data-anijs="if: mouseover, do: pulse animated"/>
-                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img class="img-fluid" src="assets/img/laravel.svg" data-anijs="if: mouseover, do: pulse animated"/>
-                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img src="assets/img/php.svg" data-anijs="if: mouseover, do: pulse animated"/>
-                            <!-- <p class="text-secondary text-center">Intermediate</p> -->
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img  src="assets/img/codeigniter-plain-wordmark.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                          
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img src="assets/img/react.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                            
-                        </div>
-
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img src="assets/img/kotlin-original.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                            
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img src="assets/img/java-original.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                          
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 col-lg-1 col-md-1 ">
-                            <img src="assets/img/javascript-js.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                          
-                        </div>
-                        <!-- <div class="d-flex flex-column align-items-center col-3  p-1 ">
-                            <img src="assets/img/android-studio.svg" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                          
-                        </div>
-                        <div class="d-flex flex-column align-items-center col-3  p-1 ">
-                            <img src="assets/img/Csharp_Logo.png" class="img-fluid" data-anijs="if: mouseover, do: pulse animated"/>
-                          
-                        </div> -->
-                       
-                    </div>
-                </div>
-                <div class="col-10 col-lg-5 d-flex flex-column mx-auto mt-5 ">
-                    <div data-anijs="if: mouseover, do: bounceIn animated">
-                        <h4 class="text-secondary fw-bold text-center">My Project</h4>
-                    </div>
-                    <div class="d-flex flex-column mt-3">
-                        <div class="d-flex flex-row justify-content-center">
-                            <button class="btn btn-primary mx-3">Website</button>
-                            <button  class="btn btn-warning mx-3">Mobile</button>
-                            <button  class="btn btn-danger mx-3">Desktop</button>
-                        </div>
-                        <div class="card mt-3">
-                            <div class="card-body">
-                                <div class="d-flex flex-column">
-                                    <div class="mt-3">
-                                        <div  data-anijs="if: mouseover, do: pulse animated">
-                                            <img class="img-fluid" src="assets/img/image_processing20190829-26116-okzi5j.gif">
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <small class="text-secondary small">Title</small>
-                                            <h3>WebSite blab balba</h3>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <small class="text-secondary small">Technologies</small>
-                                            <h5 class="text-secondary">PHP, Javascript, Laravel </h5>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <small class="text-secondary small">Description</small>
-                                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis quisquam, ipsam dolore, sequi eum ex non inventore voluptate nihil ad voluptates, aperiam nulla velit distinctio! Officia mollitia velit ad?</p>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3">
-                                        <div  data-anijs="if: mouseover, do: pulse animated">
-                                            <img class="img-fluid" src="assets/img/image_processing20190829-26116-okzi5j.gif">
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <small class="text-secondary small">Title</small>
-                                            <h3>WebSite blab balba</h3>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <small class="text-secondary small">Technologies</small>
-                                            <h5 class="text-secondary">PHP, Javascript, Laravel </h5>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <small class="text-secondary small">Description</small>
-                                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis quisquam, ipsam dolore, sequi eum ex non inventore voluptate nihil ad voluptates, aperiam nulla velit distinctio! Officia mollitia velit ad?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="d-flex flex-column m-5">
-                    <h4 class="fw-bold text-secondary">Carear</h4>
-                    <div class="d-flex flex-column col-12">
-                        <img src="assets/img/lowongan_2022317145039.png" class="col-2 img-fluid mt-3 mb-3">
-                        <div class="d-flex flex-row">
-                            <div class="d-flex flex-column">
-                                <small>Status</small>
-                                <h5 class="text-secondary">Student</h5>
-                            </div>
-                            <div class="d-flex flex-column mx-3">
-                                <small>Time</small>
-                                <h5 class="text-secondary">2020 - Now</h5>
-                            </div>
-                        </div>
-                        <p>
-                            I am a seventh-semester student majoring in Computer Engineering at Politeknik Caltex Riau, with a strong understanding of programming, computer networking, and information security. My academic record is marked by high grades, and I have gained practical experience through internships and projects. I aspire to pursue a successful career in the IT industry, leveraging my programming skills and deep technological knowledge to achieve even greater success.
-                        </p>
-                    </div>
-                    <div class="d-flex flex-column col-12">
-                        <img src="assets/img/logo-1655705615 (1).png" class="col-2 img-fluid mt-3 mb-3">
-                        <div class="d-flex flex-row">
-                            <div class="d-flex flex-column">
-                                <small>Status</small>
-                                <h5 class="text-secondary">Internship</h5>
-                            </div>
-                            <div class="d-flex flex-column mx-3">
-                                <small>Time</small>
-                                <h5 class="text-secondary">March - July <small class="text-secondary">(2023)</small></h5>
-                            </div>
-                        </div>
-                        <p>
-                            During my internship at PT. Inovindo Digital Media, I worked as a PHP web developer using the Laravel framework. I was involved in web development projects and contributed to coding, debugging, and collaborating with the team to ensure smooth performance. This experience deepened my understanding of web development and enhanced my practical skills.
-                        </p>
-                    </div>
-                    
-                </div> -->
-            </div>
-            <!-- <div class="col-lg-3 col-md-12">
-                <div class="pe-2">
-                    <div class="">
-                        <h3 class="p-2 bg-dark text-light fw-bold rounded text-center">
-                            My Project
-                        </h3>
-                    </div>
-                    <div class="mb-5">
-                       
-                        <div class="d-flex flex-row">
-                            <div class="col-3 d-flex align-items-center justify-content-center" >
-                                <img src="assets/img/laravel.svg" class="img-fluid" width="70vw">
-                            </div>
-                            <div class="col-9 d-flex flex-column">
-
-                                <h5 class="">Website Task Managment inovindo academy</h5>
-                                <small class="text-secondary">Technologies</small>
-                                <p class="text-secondary">Laravel, JavaScript, PHP</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="col-3 d-flex align-items-center justify-content-center" >
-                                <img src="assets/img/laravel.svg" class="img-fluid" width="70vw">
-                            </div>
-                            <div class="col-9 d-flex flex-column">
-
-                                <h5 class="">Website CMS Profile inovindo academy</h5>
-                                <small class="text-secondary">Technologies</small>
-                                <p class="text-secondary">Laravel, JavaScript, PHP</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="col-3 d-flex align-items-center justify-content-center" >
-                                <img src="assets/img/codeigniter-plain-wordmark.svg" class="img-fluid" width="70vw">
-                            </div>
-                            <div class="col-9 d-flex flex-column">
-
-                                <h5 class="">Website providing information about damaged roads in the city of Pekanbaru using Geographic Information System (GIS)</h5>
-                                <small class="text-secondary">Technologies</small>
-                                <p class="text-secondary">Codeigniter, leaflet</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="col-3 d-flex align-items-center justify-content-center" >
-                                <img src="assets/img/Csharp_Logo.png" class="img-fluid" width="72vw">
-                            </div>
-                            <div class="col-9 d-flex flex-column">
-
-                                <h5 style="text-transform:capitalize ;">Rental System
-                                    Tourist Bus Desktop-Based</h5>
-                                <small class="text-secondary">Technologies</small>
-                                <p class="text-secondary">C#</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="col-3 d-flex align-items-center justify-content-center" >
-                                <img src="assets/img/android-studio.svg" class="img-fluid" width="70vw">
-                            </div>
-                            <div class="col-9 d-flex flex-column">
-
-                                <h5 style="text-transform:capitalize ;">Mobile-Based Shoe Store Application Using Android Studio</h5>
-                                <small class="text-secondary">Technologies</small>
-                                <p class="text-secondary">Kotlin , Android Studio</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="col-4" style="">
-                <div class="d-flex " style=" height:30vh;" >
-                    <img src="assets/img/bandunhitam.JPG"  class="img-fluid ms-n3" style="margin-left: -10vh;" >
+            </div>              
+            <div class="img-holder" data-aos="fade-up">
+                <img src="assets/imgs/image.png" alt="">
+            </div>      
+ 
+            <!-- <div class="w-100 text-center position-relative">
+                <h1 class="h1-muhammad">Muhammad</h1>
+                <h1 class="h1-fajri">Fajri</h1>
+                <h1 class="h1-afriyansyah">Afriyansyah</h1>
+                <div class="div-hero-section">
+                    <img src="assets/imgs/fajriHeroSection.png" alt="" class="img-hero">
                 </div>
                 
             </div> -->
+           
+            
+        </div>  
+        
+        <!-- Header-widget -->
+        
+    </header>
+    <!-- End of Page Header -->
+    
+    <!-- About section -->
+    <section id="about" class="section mt-3">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3" data-aos="fade-right">
+                    <img src="assets/imgs/fajri2.png" alt="" class="img-thumbnail mb-4">
+                </div>
+                <div class="pl-md-4 col-md-9 text-left" data-aos="fade-left">
+                    <h6 class="title">Muhammad Fajri Afriyansyah</h6>
+                    <p class="subtitle">Programmer</p>
+                    <p >A graduate of Politeknik Caltex Riau with a high level of enthusiasm and motivation to pursue a career in information technology. Proficient in fundamental concepts of software development, computer networks, and information systems. Skilled in developing applications using various programming languages such as Java, PHP, VB.NET, and C#, as well as web technologies (HTML, CSS) and popular frameworks.
+                        Experienced in PHP frameworks like CodeIgniter and Laravel for backend development. Proficient in frontend technologies, including React JS for web applications and React Native for mobile development. Well-versed in REST API concepts and their practical implementation.
+                        Experienced in academic projects that hone technical skills and problem-solving abilities. Highly initiative, responsible, and always eager to learn new technologies. Detail-oriented, hardworking, and adaptable to change. Passionate about continuous self-development and contributing positively to the IT industry.</p>
+                    <button class="btn btn-light rounded mt-3">DOWNLOAD CV</button>                   
+                </div>
+            </div>
         </div>
     </section>
-    <!-- <footer class="bg-dark p-5">
-           <div class="d-flex flex-row m-5 justify-content-center">
-                <div class="d-flex flex-column text-light textProfile">
-                    <div class=" text-center">
-                        <h4 class="text-light fw-bold">Contact me <span>&#128516;</span></h4>
-                    </div>
-                    <div class="d-flex flex-row">
-                        <div class="d-flex flex-column text-center mx-2">
-                            <small class="text-light">E-mail</small>
-                            <a>fajri20ti@mahasiswa.pcr.ac.id</a>
-                        </div>
-                        <div class="d-flex flex-column text-center">
-                            <small class="text-light">linkedin</small>
-                            <a class="link-offset-2 link-underline link-underline-opacity-0 text-light" href="https://shorturl.at/wCIY6"  data-anijs="if: mouseover, do: pulse animated">https://shorturl.at/wCIY6</a>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-           </div>
-    </footer> -->
-    <!-- <section class="mt-5">
-        <div class="card">
-            <h1 class="text-center fw-bold">Profile</h1>
-            <div class="d-flex flex-row m-5">
-                <div class="col-4 ">
-                    <h3 class="fw-bold">About me</h3>
-                    <p>
-                        I am a software developer who specializes in creating 
-                        innovative software solutions. I am proficient in various 
-                        programming languages and excel at solving complex problems. 
-                        I am always enthusiastic about continuous learning and adapting 
-                        to the latest technologies.
-                    </p>
-                </div>
-                <div class="col-4 d-flex justify-content-center" style="border: 1px solid black;">
-                    
-                    
-                </div>
-                <div class="col-4">
-                    <div class="d-flex flex-column">
-                        <h3 class="fw-bold">Detail</h3>
-                        <h4 class="fw-bold mt-3">Name</h4>
-                        <h5>Muhammad Fajri Afriyansyah</h5>
-                        <h4 class="fw-bold">Location</h4>
-                        <h5>Pekanbaru, Riau</h5>
-                        <div class="d-flex flex-row">
 
+    <!-- Service section -->
+    <section id="service" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Service</h6>
+            <h6 class="section-title mb-4">What I Do</h6>
+            <br class="mb-5 pb-4 ">I specialize in providing top-notch services in software development and networking.<br> My expertise ensures high-quality solutions tailored to your needs.</p>
+
+            <div class="row ">
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-mobile"></i>
+                            <h5>Mobile Developer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-desktop"></i>
+                            <h5>Web Developer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-layout"></i>
+                            <h5>Frontend Developer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-world"></i>
+                            <h5>Networking</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-mobile"></i>
+                            <h5>App Design</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-bar-chart"></i>
+                            <h5>SEO</h5>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- End of Sectoin -->
+
+    <!-- Skills section -->
+    <section class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Skills</h6>
+            <h6 class="section-title mb-4">Why Choose me</h6>
+            <p class="mb-5 pb-4">I specialize in software development and networking,<br> offering a unique blend of expertise in both fields to deliver comprehensive solutions.</p>
+
+            <div class="logo-carousel text-left d-flex flex-row overflow-hidden " >
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/bootstrap-5-1.svg" alt="" class="imgLogo" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/c--4.svg" alt="" class="imgLogo" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/c.svg" alt="" class="imgLogo" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/codeigniter.svg" class="imgLogo" alt="" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/laravel-2.svg" class="imgLogo" alt="" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/logo-javascript.svg" class="imgLogo" alt="" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/react-native-1.svg" class="imgLogo" alt="" style="width: 70px;">
+                </div>
+                <div class="mx-5">
+                    <img src="assets/imgs/logo/tailwindcss.svg" class="imgLogo" alt="" style="width: 70px;">
+                </div>
+            </div>
+           
+            
+    </section>
+    <!-- End of Skills sections -->
+
+    <!-- Portfolio section -->
+    <section id="portfolio" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Portfolio</h6>
+            <h6 class="section-title mb-4">Explore My Amazing Projects</h6>
+            <p class="mb-5 pb-4">Take a look at some of my best work. Each project showcases my skills and dedication to quality. <br> Feel free to browse through and see what I've accomplished.</p>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/disebutkopimobileapp.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h4>Mobile App</h4>
+                                <h5>Disebut Kopi App</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/POSDisebutKopi.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h4>Mobile App</h4>
+                                <h5>Disebut Kopi POS App</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/webManagement.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h4>Web App</h4>
+                                <h5>Web Management Disebut Kopi</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/pemesananSepatu.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h4>Mobile App</h4>
+                                <h5>Shoe Reps</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/Travelku.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h4>Web App</h4>
+                                <h5>Driver Data Management and Service Information System</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/inovindoAcademy.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h4>Web App</h4>
+                                <h5>Web Inovindo Academy</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End of portfolio section -->
+
+    <!-- Testmonial Section -->
+    <!-- <section id="testmonial" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Testmonial</h6>
+            <h6 class="section-title mb-4">What People Say About Me</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-1.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">Emma Re</h1>
+                                <h1 class="subtitle">Graphic Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-2.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">James Bert</h1>
+                                <h1 class="subtitle">Web Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-3.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">Michael Abra</h1>
+                                <h1 class="subtitle">Web Developer</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section> -->
+    <!-- End of testmonial section -->
+
+    <!-- Blog Section -->
+    <!-- <section id="blog" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">My Blogs</h6>
+            <h6 class="section-title mb-4">Latest News</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Designe for Everyone</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Posted By: Admin</a>
+                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="javascript:void(0)">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Layouts</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Posted By: Admin</a>
+                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="javascript:void(0)">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap Framework</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Posted By: Admin</a>
+                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
+                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
+                            <a href="javascript:void(0)">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Hire me section -->
+    <section class="bg-gray p-0 section">
+        <div class="container">
+            <div class="card bg-success">
+                <div class="card-body text-light">
+                    <div class="row align-items-center">
+                        <div class="col-sm-9 text-center text-sm-left">
+                            <h5 class="mt-3">Hire Me For Your Project</h5>
+                            <p class="mb-3">Looking for a dedicated professional to bring your project to life? I am here to help! With a strong work ethic and a commitment to excellence, I ensure that every project I undertake is completed to the highest standards. Let’s collaborate and create something amazing together.</p>
+                        </div>
+                        <div class="col-sm-3 text-center text-sm-right">
+                            <button class="btn btn-light rounded">Hire Me!</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>      
+    <!-- End od Hire me section. -->
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="position-relative section">
+        <div class="container text-center">
+            <h6 class="subtitle">Contact</h6>
+            <h6 class="section-title mb-4">Get In Touch With Me</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+            <div class="contact text-left">
+                <div class="form">
+                    <h6 class="subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-infos">
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Location</h5>
+                            <p> 12345 Fake ST NoWhere AB Country</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>(123) 456-7890</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>info@website.com</p>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>  
+        <div id="map">
+            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
+        </div>      
+    </section> -->
+    <!-- End of Contact Section -->
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank">Muhammad Fajri Afriyansyah</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank" class="social-item" href="javascript:void(0)"><i class="ti-linkedin"></i></a>
+                        <a href="mailto:fajriafriyansyah1441h@gmail.com" class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
+                        <a href="https://github.com/fm-dev" target="_blank" class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
+                        <a href="https://www.instagram.com/fajriafriyansyah_/" target="_blank" class="social-item" href="javascript:void(0)"><i class="ti-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <!-- End of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- steller js -->
+    <script src="assets/js/steller.js"></script>
     <!-- AniJS core library -->
-    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+  <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
   
-    <!-- Include to use $addClass, $toggleClass or $removeClass -->
-    <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
+  <!-- Include to use $addClass, $toggleClass or $removeClass -->
+  <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
-  </body>
-</html>
-
