@@ -20,4 +20,6 @@ Local verification: content/link preservation, menu focus checks, copy lint, and
 
 Inovindo Academy is featured in Projects with a locally stored screenshot (`img/projects/inovindo-academy.webp`) and a link to [the live website](https://inovindoacademy.com/). The preview was captured on 10 November 2026; the contribution description refers to the owner's March–June 2023 internship. The image loads without embedding or contacting the external site.
 
+BKK SMKN 2 Pekanbaru is featured as a freelance project with a locally stored screenshot (`img/projects/bkk-smkn2-pekanbaru.webp`) and a link to [the live job portal](https://bkksmkn2pku.pocari.id/). The preview was captured on 10 November 2026 and loads without embedding the external site.
+
 GitHub activity uses the public contribution calendar for `fm-dev` through [GitHub Contributions API](https://github.com/grubersjoe/github-contributions-api). No token or build step is required. The calendar offers the last 12 months and individual years, adapts to both themes, and includes daily counts with keyboard navigation. Data is fetched on page load; the upstream service caches results for about an hour. If the service fails, the section offers retry and a direct profile link. Private contribution counts only appear when the GitHub profile makes them visible.
