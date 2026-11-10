@@ -1,33 +1,28 @@
-﻿const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('#navbarSupportedContent');
-const compactNavigation = window.matchMedia('(max-width: 44rem)');
+const header = document.querySelector('.site-header');
+const menuButton = document.querySelector('.menu-toggle');
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 
-function closeMenu() {
-  menuButton.setAttribute('aria-expanded', 'false');
-  navigation.hidden = compactNavigation.matches;
-}
+menuButton.hidden = false;
 
-function syncNavigation() {
-  menuButton.hidden = !compactNavigation.matches;
-  closeMenu();
-}
+// The kit owns the menu; keep the covered page out of the keyboard order.
+new MutationObserver(() => {
+  const open = header.classList.contains('is-open');
+  main.inert = open;
+  footer.inert = open;
+}).observe(header, { attributes: true, attributeFilter: ['class'] });
 
-menuButton.addEventListener('click', () => {
-  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!expanded));
-  navigation.hidden = expanded;
-});
-
-navigation.addEventListener('click', (event) => {
-  if (event.target.closest('a')) closeMenu();
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-    closeMenu();
-    menuButton.focus();
+header.addEventListener('keydown', (event) => {
+  if (event.key !== 'Tab' || !header.classList.contains('is-open')) return;
+  const controls = [...header.querySelectorAll('a[href], button:not([hidden])')]
+    .filter((element) => element.getClientRects().length > 0);
+  const first = controls[0];
+  const last = controls.at(-1);
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
   }
 });
-
-compactNavigation.addEventListener('change', syncNavigation);
-syncNavigation();
