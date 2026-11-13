@@ -7,8 +7,13 @@ A static portfolio for GitHub Pages. Serve this folder with a static HTTP server
 - `css/portfolio.css`: portfolio content styles and responsive adaptations.
 - `tokens.css`: the dealt cool-grey-cobalt palette, Albert Sans typography, dark theme, and calendar token aliases.
 - `js/github-activity.js`: contribution data, calendar rendering, period selection, and daily exploration.
-- `js/portfolio.js`: keyboard focus containment and background isolation for the kit's mobile menu. Content and native project disclosures remain accessible without JavaScript.
+- `js/portfolio.js`: keyboard focus containment and background isolation for the tablet menu, plus the active section indicator for phone bottom tabs. Below 640px, four icon-and-label links stay at the bottom with safe-area spacing; the language and theme controls remain in a small top row. Desktop uses the floating pill navbar. Content, bottom navigation, and native project disclosures remain accessible without JavaScript.
 - `js/color-mode.js`: light/dark mode, using the device preference until the visitor chooses a theme. The navigation toggle saves that choice in local storage and applies it before styles load.
+- `js/i18n.js`: Indonesian and English translations for page content, accessible labels, metadata, theme controls, and the GitHub calendar. The ID/EN buttons switch language without reloading and save the choice in local storage. On a first visit, an Indonesian browser preference selects Indonesian; other browsers use English. Without JavaScript, the original English content remains readable. To update copy, edit the matching `en` and `id` entries and the English fallback in `index.html`.
+
+Language switching also works when opening `index.html` directly, even though browser restrictions prevent the animation modules from loading over `file://`.
+
+Run `node tests/i18n.mjs` with Node 22+ and Chrome/Chromium to verify actual pointer clicks over HTTP and local files, persistence, accessible labels, theme integration, contribution calendar states, and responsive navigation. Set `CHROME_PATH` if the browser is installed outside the common locations. The check uses fixture contribution data and a disposable browser profile.
 
 Employment details were supplied by the profile owner from LinkedIn on 3 November 2026. Academic contributions include links to official PCR sources. Fonts are loaded from Google Fonts with local fallback fonts.
 

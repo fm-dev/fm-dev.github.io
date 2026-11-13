@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#eef0f3">
   <script src="js/color-mode.js"></script>
-  <title>Muhammad Fajri Afriyansyah | Web &amp; Backend Developer</title>
-  <meta name="description" content="Software developer working with .NET, Node.js, and SQL Server. View Fajri’s projects, work experience, and GitHub contributions.">
+  <title data-i18n="page.title">Muhammad Fajri Afriyansyah | Web &amp; Backend Developer</title>
+  <meta name="description" content="Software developer working with .NET, Node.js, and SQL Server. View Fajri’s projects, work experience, and GitHub contributions." data-i18n-content="page.description">
   <meta name="author" content="Muhammad Fajri Afriyansyah">
   <meta name="page-type" content="service">
   <meta name="site-kind" content="other">
-  <meta property="og:title" content="Muhammad Fajri Afriyansyah | Web &amp; Backend Developer">
-  <meta property="og:description" content="APIs, business applications, and automation with .NET and Node.js. Projects and experience by Muhammad Fajri Afriyansyah.">
+  <meta property="og:title" content="Muhammad Fajri Afriyansyah | Web &amp; Backend Developer" data-i18n-content="page.title">
+  <meta property="og:description" content="APIs, business applications, and automation with .NET and Node.js. Projects and experience by Muhammad Fajri Afriyansyah." data-i18n-content="page.socialDescription">
   <meta property="og:type" content="website">
   <meta property="og:image" content="share.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,9 +28,10 @@
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/portfolio.js" defer></script>
   <script src="js/github-activity.js" defer></script>
-  <noscript><style>.nav { position: relative; height: auto; }.nav__bar { flex-wrap: wrap; padding-block: 16px; }.nav .nav__links { display: flex; position: static; flex-basis: 100%; flex-wrap: wrap; }.nav__toggle { display: none !important; }</style></noscript>
+  <noscript><style>@media (min-width: 640px) { .nav { position: relative; height: auto; }.nav__bar { flex-wrap: wrap; padding-block: 16px; }.nav .nav__links { display: flex; position: static; flex-basis: 100%; flex-wrap: wrap; } }.nav__toggle { display: none !important; }</style></noscript>
 </head>
 <body>
   <!-- Taste 2.5.1: service; cool-grey-cobalt / Albert Sans; split hero; nav-centre;
@@ -38,23 +39,27 @@
        Hero re-dealt: no film or suitable full-bleed photo. Real contacts and theme switch retained. -->
   <header class="nav nav--centre site-header" id="mainNav">
     <div class="wrap nav__bar">
-      <a class="skip-link" href="#konten">Skip to content</a>
-      <a class="nav__logo wordmark" href="#beranda" aria-label="MFA, back to home">mfa<span aria-hidden="true">.</span></a>
-      <nav class="nav__links" id="navbarSupportedContent" aria-label="Main navigation">
-        <div class="nav__item"><a class="nav__link" href="#Portofolio">Projects</a></div>
-        <div class="nav__item"><a class="nav__link" href="#Pengalaman">Experience</a></div>
-        <div class="nav__item"><a class="nav__link" href="#tentang_saya">About</a></div>
-        <div class="nav__item"><a class="nav__link" href="#skills">Skills</a></div>
+      <a class="skip-link" href="#konten"><span data-i18n="nav.skip">Skip to content</span></a>
+      <a class="nav__logo wordmark" href="#beranda" aria-label="MFA, back to home" data-i18n-aria-label="nav.home">mfa<span aria-hidden="true">.</span></a>
+      <nav class="nav__links" id="navbarSupportedContent" aria-label="Main navigation" data-i18n-aria-label="nav.main">
+        <div class="nav__item"><a class="nav__link" href="#Portofolio"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span data-i18n="nav.projects">Projects</span></a></div>
+        <div class="nav__item"><a class="nav__link" href="#Pengalaman"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a21 21 0 0 0 18 0M12 12v3"/></svg><span data-i18n="nav.experience">Experience</span></a></div>
+        <div class="nav__item"><a class="nav__link" href="#tentang_saya"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span data-i18n="nav.about">About</span></a></div>
+        <div class="nav__item"><a class="nav__link" href="#skills"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></svg><span data-i18n="nav.skills">Skills</span></a></div>
       </nav>
       <div class="nav__actions">
+        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="nav.language" hidden>
+          <button type="button" data-language="id" lang="id" aria-label="Bahasa Indonesia" aria-pressed="false">ID</button>
+          <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+        </div>
         <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
           <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
           <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          <span class="theme-label visually-hidden">Dark mode</span>
+          <span class="theme-label visually-hidden"><span data-i18n="theme.dark">Dark mode</span></span>
         </button>
-        <a class="btn btn--primary" href="https://wa.me/6285263676114" target="_blank" rel="noopener noreferrer">Contact me</a>
+        <a class="btn btn--primary" href="https://wa.me/6285263676114" target="_blank" rel="noopener noreferrer"><span data-i18n="nav.contact">Contact me</span></a>
       </div>
-      <button class="nav__toggle menu-toggle" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menu" hidden>Menu</button>
+      <button class="nav__toggle menu-toggle" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menu" data-i18n-aria-label="nav.menu" hidden><span data-i18n="nav.menu">Menu</span></button>
     </div>
   </header>
   <main id="konten">
@@ -62,161 +67,161 @@
       <div class="wrap"><div class="hero-text grid hero__grid">
         <div class="hero__text span-5">
           <p class="hero__kicker">Muhammad Fajri Afriyansyah</p>
-          <h1 id="app">Web &amp; backend developer.</h1>
-          <p class="hero__lead">APIs, business applications, and automation with .NET and Node.js. Informatics Engineering, 2020–2024.</p>
-          <div class="btn-row"><a class="btn btn--primary" href="https://wa.me/6285263676114" target="_blank" rel="noopener noreferrer">Contact me <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#Portofolio">View projects</a></div>
+          <h1 id="app" data-enter-whole><span data-i18n="hero.title">Web &amp; backend developer.</span></h1>
+          <p class="hero__lead"><span data-i18n="hero.lead">APIs, business applications, and automation with .NET and Node.js. Informatics Engineering, 2020–2024.</span></p>
+          <div class="btn-row"><a class="btn btn--primary" href="https://wa.me/6285263676114" target="_blank" rel="noopener noreferrer"><span data-i18n="nav.contact">Contact me</span> <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#Portofolio"><span data-i18n="hero.projects">View projects</span></a></div>
         </div>
-        <div class="hero__media portrait span-6 start-7"><img src="img/profile/fajri2-transformed.png" alt="Portrait of Muhammad Fajri Afriyansyah" width="1200" height="1600" fetchpriority="high"></div>
+        <div class="hero__media portrait span-6 start-7"><img src="img/profile/fajri2-transformed.png" alt="Portrait of Muhammad Fajri Afriyansyah" data-i18n-alt="hero.portrait" width="1200" height="1600" fetchpriority="high"></div>
       </div></div>
     </section>
     <section class="work section" id="Portofolio" aria-labelledby="work-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="work-title">A website in production.</h2><p>Contributed during my internship at PT. Inovindo Digital Media.</p></div>
+        <div class="section-head"><h2 id="work-title"><span data-i18n="projects.production">A website in production.</span></h2><p><span data-i18n="projects.internship">Contributed during my internship at PT. Inovindo Digital Media.</span></p></div>
         <article class="featured-project grid" id="inovindo-academy" aria-labelledby="inovindo-title"><div class="featured-project-copy span-5">
 
             <h3 id="inovindo-title">Inovindo Academy.</h3>
-            <p>Training and internship programs, presented online. I contributed to the website during my programmer internship at Inovindo.</p>
-            <dl class="project-facts"><div><dt>Technologies</dt><dd>Laravel 9, ASP.NET</dd></div><div><dt>Period</dt><dd><time datetime="2023-03">Mar 2023</time> to <time datetime="2023-06">Jun 2023</time></dd></div></dl>
-            <a class="btn btn--secondary" href="https://inovindoacademy.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+            <p><span data-i18n="projects.academy">Training and internship programs, presented online. I contributed to the website during my programmer internship at Inovindo.</span></p>
+            <dl class="project-facts"><div><dt><span data-i18n="projects.technologies">Technologies</span></dt><dd>Laravel 9, ASP.NET</dd></div><div><dt><span data-i18n="projects.period">Period</span></dt><dd><time datetime="2023-03"><span data-i18n="date.march2023">Mar 2023</span></time> <span data-i18n="date.to">to</span> <time datetime="2023-06"><span data-i18n="date.june2023">Jun 2023</span></time></dd></div></dl>
+            <a class="btn btn--secondary" href="https://inovindoacademy.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.visit">Visit website</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
           </div>
-<a class="project-preview frame m-zoom span-6 start-7" href="https://inovindoacademy.com/" target="_blank" rel="noopener noreferrer" aria-label="Preview Inovindo Academy, opens website in a new tab">
+<a class="project-preview frame m-zoom span-6 start-7" href="https://inovindoacademy.com/" target="_blank" rel="noopener noreferrer" aria-label="Preview Inovindo Academy, opens website in a new tab" data-i18n-aria-label="projects.academyPreview">
             <span class="preview-toolbar"><svg class="preview-dots" viewBox="0 0 40 16" aria-hidden="true"><circle cx="4" cy="8" r="3"/><circle cx="20" cy="8" r="3"/><circle cx="36" cy="8" r="3"/></svg><span>inovindoacademy.com</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
-            <img src="img/projects/inovindo-academy.webp" alt="Inovindo Academy homepage with its training and internship introduction and featured programs." width="1440" height="1000" loading="lazy" decoding="async">
+            <img src="img/projects/inovindo-academy.webp" alt="Inovindo Academy homepage with its training and internship introduction and featured programs." data-i18n-alt="projects.academyAlt" width="1440" height="1000" loading="lazy" decoding="async">
           </a></article>
       </div>
     </section>
     <section class="work section" id="freelance-project" aria-labelledby="freelance-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="freelance-title">A freelance job portal.</h2><p>Bursa Kerja Khusus for SMKN 2 Pekanbaru.</p></div>
+        <div class="section-head"><h2 id="freelance-title"><span data-i18n="projects.jobsTitle">A freelance job portal.</span></h2><p><span data-i18n="projects.jobsLead">Bursa Kerja Khusus for SMKN 2 Pekanbaru.</span></p></div>
         <article class="featured-project grid" id="bkk-smkn2-pekanbaru" aria-labelledby="bkk-title">
           <div class="featured-project-copy span-5">
             <h3 id="bkk-title">BKK SMKN 2 Pekanbaru.</h3>
-            <p>A freelance project for the Bursa Kerja Khusus (BKK) at SMKN 2 Pekanbaru. The portal helps vocational school graduates find job vacancies and apply for available positions.</p>
-            <dl class="project-facts"><div><dt>Platform</dt><dd>Web application</dd></div><div><dt>Project type</dt><dd>Freelance</dd></div><div><dt>Purpose</dt><dd>Job listings and applications</dd></div></dl>
-            <a class="btn btn--secondary" href="https://bkksmkn2pku.pocari.id/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+            <p><span data-i18n="projects.jobs">A freelance project for the Bursa Kerja Khusus (BKK) at SMKN 2 Pekanbaru. The portal helps vocational school graduates find job vacancies and apply for available positions.</span></p>
+            <dl class="project-facts"><div><dt><span data-i18n="projects.platform">Platform</span></dt><dd><span data-i18n="projects.webApp">Web application</span></dd></div><div><dt><span data-i18n="projects.type">Project type</span></dt><dd><span data-i18n="projects.freelance">Freelance</span></dd></div><div><dt><span data-i18n="projects.purpose">Purpose</span></dt><dd><span data-i18n="projects.jobPurpose">Job listings and applications</span></dd></div></dl>
+            <a class="btn btn--secondary" href="https://bkksmkn2pku.pocari.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.visit">Visit website</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
           </div>
-          <a class="project-preview frame m-zoom span-6 start-7" href="https://bkksmkn2pku.pocari.id/" target="_blank" rel="noopener noreferrer" aria-label="Preview BKK SMKN 2 Pekanbaru, opens website in a new tab">
+          <a class="project-preview frame m-zoom span-6 start-7" href="https://bkksmkn2pku.pocari.id/" target="_blank" rel="noopener noreferrer" aria-label="Preview BKK SMKN 2 Pekanbaru, opens website in a new tab" data-i18n-aria-label="projects.jobsPreview">
             <span class="preview-toolbar"><svg class="preview-dots" viewBox="0 0 40 16" aria-hidden="true"><circle cx="4" cy="8" r="3"/><circle cx="20" cy="8" r="3"/><circle cx="36" cy="8" r="3"/></svg><span>bkksmkn2pku.pocari.id</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
-            <img src="img/projects/bkk-smkn2-pekanbaru.webp" alt="BKK SMKN 2 Pekanbaru homepage with its job portal introduction and applicant, company, and vacancy statistics." width="1440" height="1000" loading="lazy" decoding="async">
+            <img src="img/projects/bkk-smkn2-pekanbaru.webp" alt="BKK SMKN 2 Pekanbaru homepage with its job portal introduction and applicant, company, and vacancy statistics." data-i18n-alt="projects.jobsAlt" width="1440" height="1000" loading="lazy" decoding="async">
           </a>
         </article>
       </div>
     </section>
     <section class="work section" id="kost-uni-salma-project" aria-labelledby="kost-work-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="kost-work-title">A freelance boarding house website.</h2><p>Room information and visit enquiries for Kos Uni Salma.</p></div>
+        <div class="section-head"><h2 id="kost-work-title"><span data-i18n="projects.kosTitle">A freelance boarding house website.</span></h2><p><span data-i18n="projects.kosLead">Room information and visit enquiries for Kos Uni Salma.</span></p></div>
         <article class="featured-project grid" id="kost-uni-salma" aria-labelledby="kost-title">
           <div class="featured-project-copy span-5">
             <h3 id="kost-title">Kos Uni Salma.</h3>
-            <p>A freelance website for a boarding house in Air Jamban, Mandau, Riau. Visitors can explore room options, facilities, and photos, compare rental costs, and arrange a visit through WhatsApp.</p>
-            <dl class="project-facts"><div><dt>Platform</dt><dd>Website</dd></div><div><dt>Project type</dt><dd>Freelance</dd></div><div><dt>Purpose</dt><dd>Room information and visit enquiries</dd></div></dl>
-            <a class="btn btn--secondary" href="https://kost-uni-salma.vercel.app/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+            <p><span data-i18n="projects.kos">A freelance website for a boarding house in Air Jamban, Mandau, Riau. Visitors can explore room options, facilities, and photos, compare rental costs, and arrange a visit through WhatsApp.</span></p>
+            <dl class="project-facts"><div><dt><span data-i18n="projects.platform">Platform</span></dt><dd><span data-i18n="projects.website">Website</span></dd></div><div><dt><span data-i18n="projects.type">Project type</span></dt><dd><span data-i18n="projects.freelance">Freelance</span></dd></div><div><dt><span data-i18n="projects.purpose">Purpose</span></dt><dd><span data-i18n="projects.roomPurpose">Room information and visit enquiries</span></dd></div></dl>
+            <a class="btn btn--secondary" href="https://kost-uni-salma.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.visit">Visit website</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
           </div>
-          <a class="project-preview frame m-zoom span-6 start-7" href="https://kost-uni-salma.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Preview Kos Uni Salma, opens website in a new tab">
+          <a class="project-preview frame m-zoom span-6 start-7" href="https://kost-uni-salma.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Preview Kos Uni Salma, opens website in a new tab" data-i18n-aria-label="projects.kosPreview">
             <span class="preview-toolbar"><svg class="preview-dots" viewBox="0 0 40 16" aria-hidden="true"><circle cx="4" cy="8" r="3"/><circle cx="20" cy="8" r="3"/><circle cx="36" cy="8" r="3"/></svg><span>kost-uni-salma.vercel.app</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
-            <img src="img/projects/kost-uni-salma.webp" alt="Kos Uni Salma homepage showing its boarding house introduction, room information, and property photo." width="1440" height="1000" loading="lazy" decoding="async">
+            <img src="img/projects/kost-uni-salma.webp" alt="Kos Uni Salma homepage showing its boarding house introduction, room information, and property photo." data-i18n-alt="projects.kosAlt" width="1440" height="1000" loading="lazy" decoding="async">
           </a>
         </article>
       </div>
     </section>
     <section class="section project-index" id="more-projects" aria-labelledby="projects-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="projects-title">Web application projects.</h2><p>Data management, mapping, and a home service marketplace.</p></div>
+        <div class="section-head"><h2 id="projects-title"><span data-i18n="projects.more">Web application projects.</span></h2><p><span data-i18n="projects.moreLead">Data management, mapping, and a home service marketplace.</span></p></div>
         <div class="project-list">
           <details class="project" open>
-            <summary><h3>Driver data management system</h3><span class="project-stack">ASP.NET / Oracle</span><span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <summary><h3><span data-i18n="projects.driverTitle">Driver data management system</span></h3><span class="project-stack">ASP.NET / Oracle</span><span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
             <div class="project-content">
-              <div class="project-description"><p>A driver services and data management system. I designed the project, implemented the application with ASP.NET, and built the Oracle database.</p><time>September 2020 to January 2023</time></div>
-              <dl class="project-facts"><div><dt>Platform</dt><dd>Web application</dd></div><div><dt>Contribution</dt><dd>Design and implementation</dd></div><div><dt>Technologies</dt><dd>ASP.NET, Oracle</dd></div></dl>
+              <div class="project-description"><p><span data-i18n="projects.driver">A driver services and data management system. I designed the project, implemented the application with ASP.NET, and built the Oracle database.</span></p><time><span data-i18n="date.driver">September 2020 to January 2023</span></time></div>
+              <dl class="project-facts"><div><dt><span data-i18n="projects.platform">Platform</span></dt><dd><span data-i18n="projects.webApp">Web application</span></dd></div><div><dt><span data-i18n="projects.contribution">Contribution</span></dt><dd><span data-i18n="projects.design">Design and implementation</span></dd></div><div><dt><span data-i18n="projects.technologies">Technologies</span></dt><dd>ASP.NET, Oracle</dd></div></dl>
             </div>
           </details>
           <details class="project">
-            <summary><h3>Pekanbaru traffic GIS</h3><span class="project-stack">CodeIgniter 3 / Leaflet</span><span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <summary><h3><span data-i18n="projects.gisTitle">Pekanbaru traffic GIS</span></h3><span class="project-stack">CodeIgniter 3 / Leaflet</span><span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
             <div class="project-content">
-              <div class="project-description"><p>A web-based map of traffic congestion in Pekanbaru. My contributions included the project proposal, field surveys, CodeIgniter 3 development, and Leaflet integration.</p><time>October 2020 to January 2023</time></div>
-              <dl class="project-facts"><div><dt>Platform</dt><dd>Web GIS</dd></div><div><dt>Contribution</dt><dd>Field surveys and development</dd></div><div><dt>Technologies</dt><dd>CodeIgniter 3, Leaflet</dd></div></dl>
+              <div class="project-description"><p><span data-i18n="projects.gis">A web-based map of traffic congestion in Pekanbaru. My contributions included the project proposal, field surveys, CodeIgniter 3 development, and Leaflet integration.</span></p><time><span data-i18n="date.gis">October 2020 to January 2023</span></time></div>
+              <dl class="project-facts"><div><dt><span data-i18n="projects.platform">Platform</span></dt><dd><span data-i18n="projects.webGis">Web GIS</span></dd></div><div><dt><span data-i18n="projects.contribution">Contribution</span></dt><dd><span data-i18n="projects.surveys">Field surveys and development</span></dd></div><div><dt><span data-i18n="projects.technologies">Technologies</span></dt><dd>CodeIgniter 3, Leaflet</dd></div></dl>
             </div>
           </details>
           <details class="project">
-            <summary><h3>Home service marketplace</h3><span class="project-stack">E-commerce / CodeIgniter 3</span><span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <summary><h3><span data-i18n="projects.marketTitle">Home service marketplace</span></h3><span class="project-stack">E-commerce / CodeIgniter 3</span><span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
             <div class="project-content">
-              <div class="project-description"><p>An e-commerce website for home services. I designed the website and implemented it using CodeIgniter 3.</p><time>June 2022</time></div>
-              <dl class="project-facts"><div><dt>Platform</dt><dd>Web application</dd></div><div><dt>Contribution</dt><dd>Design and implementation</dd></div><div><dt>Technologies</dt><dd>PHP, CodeIgniter 3</dd></div></dl>
+              <div class="project-description"><p><span data-i18n="projects.market">An e-commerce website for home services. I designed the website and implemented it using CodeIgniter 3.</span></p><time><span data-i18n="date.market">June 2022</span></time></div>
+              <dl class="project-facts"><div><dt><span data-i18n="projects.platform">Platform</span></dt><dd><span data-i18n="projects.webApp">Web application</span></dd></div><div><dt><span data-i18n="projects.contribution">Contribution</span></dt><dd><span data-i18n="projects.design">Design and implementation</span></dd></div><div><dt><span data-i18n="projects.technologies">Technologies</span></dt><dd>PHP, CodeIgniter 3</dd></div></dl>
             </div>
           </details>
         </div>
       </div>
     </section>
-    <section class="experience section" id="Pengalaman" aria-labelledby="experience-title"><div class="wrap"><div class="section-head"><h2 class="heading-with-icon" id="experience-title"><img src="assets/icons/nodejs.svg" alt="" width="32" height="32" loading="lazy">Work experience.</h2><p>Software and backend development, from internship to full-time work.</p></div><div class="experience-list"><article class="experience-row">
-            <div class="experience-role"><h3>Software Developer</h3><p><a href="https://www.linkedin.com/company/312710/" target="_blank" rel="noopener noreferrer">PT Mitra Solusi Telematika</a></p><div class="employment-meta"><time datetime="2026-01">Jan 2026 to Oct 2026</time><span>Full-time</span><span>Cilandak, Jakarta</span></div></div>
-            <div class="experience-detail"><ul><li>Developed APIs and backend features using .NET and Node.js, managed data, and optimized SQL Server queries.</li><li>Built and maintained SharePoint SPFx web parts and internal tools, and automated workflows with Power Automate.</li><li>Participated in daily sprint meetings with frontend and backend developers, QA engineers, and product owners. Used Azure DevOps for version control, CI/CD pipelines, and task management.</li></ul><p class="technology-note">.NET / Node.js / SQL Server / SPFx / Power Automate / Azure DevOps</p></div>
+    <section class="experience section" id="Pengalaman" aria-labelledby="experience-title"><div class="wrap"><div class="section-head"><h2 class="heading-with-icon" id="experience-title"><img src="assets/icons/nodejs.svg" alt="" width="32" height="32" loading="lazy"><span data-i18n="experience.title">Work experience.</span></h2><p><span data-i18n="experience.lead">Software and backend development, from internship to full-time work.</span></p></div><div class="experience-list"><article class="experience-row">
+            <div class="experience-role"><h3><span data-i18n="experience.software">Software Developer</span></h3><p><a href="https://www.linkedin.com/company/312710/" target="_blank" rel="noopener noreferrer">PT Mitra Solusi Telematika</a></p><div class="employment-meta"><time datetime="2026-01"><span data-i18n="date.mitra">Jan 2026 to Oct 2026</span></time><span><span data-i18n="experience.fullTime">Full-time</span></span><span>Cilandak, Jakarta</span></div></div>
+            <div class="experience-detail"><ul><li><span data-i18n="experience.mitra1">Developed APIs and backend features using .NET and Node.js, managed data, and optimized SQL Server queries.</span></li><li><span data-i18n="experience.mitra2">Built and maintained SharePoint SPFx web parts and internal tools, and automated workflows with Power Automate.</span></li><li><span data-i18n="experience.mitra3">Participated in daily sprint meetings with frontend and backend developers, QA engineers, and product owners. Used Azure DevOps for version control, CI/CD pipelines, and task management.</span></li></ul><p class="technology-note">.NET / Node.js / SQL Server / SPFx / Power Automate / Azure DevOps</p></div>
           </article>
 <article class="experience-row">
-            <div class="experience-role"><h3>Backend Developer</h3><p><a href="https://www.linkedin.com/company/79522571/" target="_blank" rel="noopener noreferrer">Mandiri Inhealth</a></p><div class="employment-meta"><time datetime="2025-02">Feb 2025 to Dec 2025</time><span>Contract</span><span>South Jakarta</span></div></div>
-            <div class="experience-detail"><ul><li>Developed and maintained the Cervia application using C# and ASP.NET Core.</li><li>Built RESTful APIs and wrote LINQ queries for SQL Server.</li><li>Worked with frontend, QA, and product teams on unit testing, debugging, performance optimization, and data security.</li></ul><p class="technology-note">C# / ASP.NET Core / LINQ / SQL Server / RESTful APIs</p></div>
+            <div class="experience-role"><h3><span data-i18n="experience.backend">Backend Developer</span></h3><p><a href="https://www.linkedin.com/company/79522571/" target="_blank" rel="noopener noreferrer">Mandiri Inhealth</a></p><div class="employment-meta"><time datetime="2025-02"><span data-i18n="date.inhealth">Feb 2025 to Dec 2025</span></time><span><span data-i18n="experience.contract">Contract</span></span><span><span data-i18n="experience.jakarta">South Jakarta</span></span></div></div>
+            <div class="experience-detail"><ul><li><span data-i18n="experience.inhealth1">Developed and maintained the Cervia application using C# and ASP.NET Core.</span></li><li><span data-i18n="experience.inhealth2">Built RESTful APIs and wrote LINQ queries for SQL Server.</span></li><li><span data-i18n="experience.inhealth3">Worked with frontend, QA, and product teams on unit testing, debugging, performance optimization, and data security.</span></li></ul><p class="technology-note">C# / ASP.NET Core / LINQ / SQL Server / RESTful APIs</p></div>
           </article></div></div></section>
-    <section class="experience section" id="earlier-experience" aria-labelledby="earlier-title"><div class="wrap"><div class="section-head"><h2 class="heading-with-icon" id="earlier-title"><img src="assets/icons/laravel.svg" alt="" width="32" height="32" loading="lazy">Earlier development roles.</h2><p>Application maintenance, web development, and an industry internship.</p></div><div class="experience-list"><article class="experience-row">
-            <div class="experience-role"><h3>Programmer</h3><p>PT. Sumatra Timurindonesia</p><div class="employment-meta"><time datetime="2024-10">Oct 2024 to Jan 2025</time><span>Contract</span><span>Sungai Guntung, Riau</span></div></div>
-            <div class="experience-detail"><ul><li>Maintained existing applications, fixed bugs, and added features to systems already in use.</li><li>Developed web and full-stack applications with Laravel and CodeIgniter 3, mobile apps with React Native, and backend services with ASP.NET Core Web API.</li><li>Collaborated with the team on troubleshooting and debugging to maintain system performance and reliability.</li></ul><p class="technology-note">Laravel / CodeIgniter 3 / React Native / ASP.NET Core Web API</p></div>
+    <section class="experience section" id="earlier-experience" aria-labelledby="earlier-title"><div class="wrap"><div class="section-head"><h2 class="heading-with-icon" id="earlier-title"><img src="assets/icons/laravel.svg" alt="" width="32" height="32" loading="lazy"><span data-i18n="experience.earlier">Earlier development roles.</span></h2><p><span data-i18n="experience.earlierLead">Application maintenance, web development, and an industry internship.</span></p></div><div class="experience-list"><article class="experience-row">
+            <div class="experience-role"><h3><span data-i18n="experience.programmer">Programmer</span></h3><p>PT. Sumatra Timurindonesia</p><div class="employment-meta"><time datetime="2024-10"><span data-i18n="date.sumatra">Oct 2024 to Jan 2025</span></time><span><span data-i18n="experience.contract">Contract</span></span><span>Sungai Guntung, Riau</span></div></div>
+            <div class="experience-detail"><ul><li><span data-i18n="experience.sumatra1">Maintained existing applications, fixed bugs, and added features to systems already in use.</span></li><li><span data-i18n="experience.sumatra2">Developed web and full-stack applications with Laravel and CodeIgniter 3, mobile apps with React Native, and backend services with ASP.NET Core Web API.</span></li><li><span data-i18n="experience.sumatra3">Collaborated with the team on troubleshooting and debugging to maintain system performance and reliability.</span></li></ul><p class="technology-note">Laravel / CodeIgniter 3 / React Native / ASP.NET Core Web API</p></div>
           </article>
 <article class="experience-row">
-            <div class="experience-role"><h3>Programmer</h3><p><a href="https://www.linkedin.com/company/90957303/" target="_blank" rel="noopener noreferrer">PT. Inovindo Digital Media</a></p><div class="employment-meta"><time datetime="2023-03">Mar 2023 to Jun 2023</time><span>Internship</span><span>Bandung, West Java</span></div></div>
-            <div class="experience-detail"><ul><li>Contributed to the development of Inovindoacademy.com using Laravel 9 and ASP.NET.</li><li>Designed and built an internship management application with daily reporting and project progress tracking.</li><li>Collaborated with the team to maintain website functionality and quality while following web development best practices.</li></ul><p class="technology-note">Laravel 9 / ASP.NET / Internship management</p><a class="link inline-link" href="#inovindo-academy">View project preview <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></a></div>
-          </article></div><div class="experience-bottom"><a class="link" href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank" rel="noopener noreferrer">View LinkedIn profile <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><span>All positions were on-site.</span></div></div></section>
+            <div class="experience-role"><h3><span data-i18n="experience.programmer">Programmer</span></h3><p><a href="https://www.linkedin.com/company/90957303/" target="_blank" rel="noopener noreferrer">PT. Inovindo Digital Media</a></p><div class="employment-meta"><time datetime="2023-03"><span data-i18n="date.inovindo">Mar 2023 to Jun 2023</span></time><span><span data-i18n="experience.internship">Internship</span></span><span><span data-i18n="experience.bandung">Bandung, West Java</span></span></div></div>
+            <div class="experience-detail"><ul><li><span data-i18n="experience.inovindo1">Contributed to the development of Inovindoacademy.com using Laravel 9 and ASP.NET.</span></li><li><span data-i18n="experience.inovindo2">Designed and built an internship management application with daily reporting and project progress tracking.</span></li><li><span data-i18n="experience.inovindo3">Collaborated with the team to maintain website functionality and quality while following web development best practices.</span></li></ul><p class="technology-note"><span data-i18n="experience.inovindoTools">Laravel 9 / ASP.NET / Internship management</span></p><a class="link inline-link" href="#inovindo-academy"><span data-i18n="experience.preview">View project preview</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></a></div>
+          </article></div><div class="experience-bottom"><a class="link" href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank" rel="noopener noreferrer"><span data-i18n="experience.linkedin">View LinkedIn profile</span> <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><span><span data-i18n="experience.onsite">All positions were on-site.</span></span></div></div></section>
     <section class="github-activity section" id="github-activity" aria-labelledby="github-title">
       <div class="wrap">
-        <div class="section-head"><h2 class="heading-with-icon" id="github-title"><img src="assets/icons/github.svg" class="ic-ink" alt="" width="32" height="32" loading="lazy">GitHub contributions.</h2><p>A calendar of my GitHub contributions. <a class="link inline-link" href="https://github.com/fm-dev" target="_blank" rel="noopener noreferrer">View @fm-dev <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></div>
+        <div class="section-head"><h2 class="heading-with-icon" id="github-title"><img src="assets/icons/github.svg" class="ic-ink" alt="" width="32" height="32" loading="lazy"><span data-i18n="github.title">GitHub contributions.</span></h2><p><span data-i18n="github.lead">A calendar of my GitHub contributions.</span> <a class="link inline-link" href="https://github.com/fm-dev" target="_blank" rel="noopener noreferrer"><span data-i18n="github.profile">View @fm-dev</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></div>
         <div class="contribution-panel frame">
           <div class="contribution-toolbar">
-            <p class="contribution-summary" aria-live="polite">GitHub contributions</p>
-            <label class="contribution-year-label" for="contribution-year">Period <select id="contribution-year" disabled><option value="last">Last 12 months</option></select></label>
+            <p class="contribution-summary" aria-live="polite"><span data-i18n="github.summary">GitHub contributions</span></p>
+            <label class="contribution-year-label" for="contribution-year"><span data-i18n="projects.period">Period</span> <select id="contribution-year" disabled><option value="last" data-i18n="github.last">Last 12 months</option></select></label>
           </div>
-          <p class="contribution-status" role="status">Enable JavaScript to load the contribution calendar, or view my GitHub profile.</p>
-          <button class="contribution-retry" type="button" hidden>Try again</button>
+          <p class="contribution-status" role="status"><span data-i18n="github.noScript">Enable JavaScript to load the contribution calendar, or view my GitHub profile.</span></p>
+          <button class="contribution-retry" type="button" hidden><span data-i18n="github.retry">Try again</span></button>
           <div class="contribution-chart" hidden>
-            <div class="contribution-calendar" tabindex="0" role="region" aria-label="GitHub contribution calendar. Scroll horizontally to view more dates."></div>
+            <div class="contribution-calendar" tabindex="0" role="region" aria-label="GitHub contribution calendar. Scroll horizontally to view more dates." data-i18n-aria-label="github.calendar"></div>
             <div class="contribution-footer">
-              <p class="contribution-detail" aria-live="polite">Hover, tap, or use arrow keys to explore contributions.</p>
-              <div class="contribution-legend" aria-label="Contribution intensity from less to more"><span>Less</span><span class="contribution-swatch" data-level="0"></span><span class="contribution-swatch" data-level="1"></span><span class="contribution-swatch" data-level="2"></span><span class="contribution-swatch" data-level="3"></span><span class="contribution-swatch" data-level="4"></span><span>More</span></div>
+              <p class="contribution-detail" aria-live="polite"><span data-i18n="github.hint">Hover, tap, or use arrow keys to explore contributions.</span></p>
+              <div class="contribution-legend" aria-label="Contribution intensity from less to more" data-i18n-aria-label="github.intensity"><span><span data-i18n="github.less">Less</span></span><span class="contribution-swatch" data-level="0"></span><span class="contribution-swatch" data-level="1"></span><span class="contribution-swatch" data-level="2"></span><span class="contribution-swatch" data-level="3"></span><span class="contribution-swatch" data-level="4"></span><span><span data-i18n="github.more">More</span></span></div>
             </div>
           </div>
         </div>
-        <p class="contribution-note">Activity shown on my GitHub profile. Updates may take about an hour to appear.</p>
+        <p class="contribution-note"><span data-i18n="github.note">Activity shown on my GitHub profile. Updates may take about an hour to appear.</span></p>
       </div>
     </section>
 
     <section class="about section" id="tentang_saya" data-moment="word-highlight" aria-labelledby="about-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="about-title">Engineering background.</h2></div>
-        <p class="mo-wh__text">I develop <strong>backend services</strong>, web applications, and workflow automation. I studied Informatics Engineering at Politeknik Caltex Riau from 2020 to 2024.</p>
+        <div class="section-head"><h2 id="about-title"><span data-i18n="about.title">Engineering background.</span></h2></div>
+        <p class="mo-wh__text"><span data-i18n="about.intro">I develop</span> <strong><span data-i18n="about.backend">backend services</span></strong><span data-i18n="about.body">, web applications, and workflow automation. I studied Informatics Engineering at Politeknik Caltex Riau from 2020 to 2024.</span></p>
         <div class="about-details grid">
-          <div class="span-5"><h3>Politeknik Caltex Riau</h3><p>Informatics Engineering (D4)</p><time>2020 to 2024</time><details class="earlier-education"><summary>Earlier education</summary><p>SMAN 3 Mandau, Natural Sciences, 2016 to 2018.</p></details></div>
-          <blockquote class="span-6 start-7"><p>“Focus on doing your best rather than being the best. The results are a bonus.”</p><cite>Muhammad Fajri Afriyansyah</cite></blockquote>
+          <div class="span-5"><h3>Politeknik Caltex Riau</h3><p><span data-i18n="about.major">Informatics Engineering (D4)</span></p><time><span data-i18n="date.education">2020 to 2024</span></time><details class="earlier-education"><summary><span data-i18n="about.earlier">Earlier education</span></summary><p><span data-i18n="about.school">SMAN 3 Mandau, Natural Sciences, 2016 to 2018.</span></p></details></div>
+          <blockquote class="span-6 start-7"><p><span data-i18n="about.quote">“Focus on doing your best rather than being the best. The results are a bonus.”</span></p><cite>Muhammad Fajri Afriyansyah</cite></blockquote>
         </div>
-        <details class="academic-work"><summary>Community &amp; research <span aria-hidden="true">+</span></summary><div class="academic-grid">
-          <article><h3>Order management application</h3><p>Co-authored research with Shumaya Resty Ramadhani on prototyping, user acceptance, and usability for the Disebut Kopi application.</p><a class="link inline-link" href="https://jurnal.pcr.ac.id/index.php/jkt/id/article/view/6421" target="_blank" rel="noopener noreferrer">Read publication</a><p class="academic-date">November 2024</p></article>
-          <article><h3>Computational thinking</h3><p>Supported computational thinking training for SMAN 5 Pekanbaru students alongside lecturers from Politeknik Caltex Riau.</p><a class="link inline-link" href="https://pcr.ac.id/artikel/read/tingkatkan-peran-siswa-dalam-menyelesaikan-permasalahan-dosen-pcr-berikan-pelatihan-dan-implementasi-computional-thinking-kepada-sman-5-pekanbaru" target="_blank" rel="noopener noreferrer">View activity</a><p class="academic-date">25 November 2021</p></article>
-          <article><h3>Campus organizations</h3><p>Provided web development mentoring at Caltex Techno Scientist and served on the Timeline Coordinator System team for the ITSA General Assembly.</p></article>
+        <details class="academic-work"><summary><span data-i18n="about.community">Community &amp; research</span> <span aria-hidden="true">+</span></summary><div class="academic-grid">
+          <article><h3><span data-i18n="about.orderTitle">Order management application</span></h3><p><span data-i18n="about.order">Co-authored research with Shumaya Resty Ramadhani on prototyping, user acceptance, and usability for the Disebut Kopi application.</span></p><a class="link inline-link" href="https://jurnal.pcr.ac.id/index.php/jkt/id/article/view/6421" target="_blank" rel="noopener noreferrer"><span data-i18n="about.publication">Read publication</span></a><p class="academic-date"><span data-i18n="date.publication">November 2024</span></p></article>
+          <article><h3><span data-i18n="about.thinkingTitle">Computational thinking</span></h3><p><span data-i18n="about.thinking">Supported computational thinking training for SMAN 5 Pekanbaru students alongside lecturers from Politeknik Caltex Riau.</span></p><a class="link inline-link" href="https://pcr.ac.id/artikel/read/tingkatkan-peran-siswa-dalam-menyelesaikan-permasalahan-dosen-pcr-berikan-pelatihan-dan-implementasi-computional-thinking-kepada-sman-5-pekanbaru" target="_blank" rel="noopener noreferrer"><span data-i18n="about.activity">View activity</span></a><p class="academic-date"><span data-i18n="date.activity">25 November 2021</span></p></article>
+          <article><h3><span data-i18n="about.organizationsTitle">Campus organizations</span></h3><p><span data-i18n="about.organizations">Provided web development mentoring at Caltex Techno Scientist and served on the Timeline Coordinator System team for the ITSA General Assembly.</span></p></article>
         </div></details>
       </div>
     </section>
     <section class="skills section" id="skills" aria-labelledby="skills-title">
-      <div class="wrap"><div class="section-head"><h2 class="heading-with-icon" id="skills-title"><img src="assets/icons/dotnet.svg" alt="" width="32" height="32" loading="lazy">Development tools.</h2><p>Technologies I use across backend, web, mobile, and automation work.</p></div><dl class="skill-list">
-          <div><dt>Backend &amp; desktop</dt><dd>C#, .NET, ASP.NET Core, Node.js, RESTful APIs, LINQ, JSP, VB.NET</dd></div>
-          <div><dt>Web &amp; mobile</dt><dd>HTML, CSS, JavaScript, PHP, Laravel, CodeIgniter, React Native, Android Studio, Kotlin, Java</dd></div>
-          <div><dt>Data &amp; delivery</dt><dd>SQL Server, Oracle, Azure DevOps, CI/CD</dd></div>
-          <div><dt>Integration &amp; automation</dt><dd>SharePoint SPFx web parts, Power Automate</dd></div>
-          <div><dt>Design &amp; video</dt><dd>Figma, Adobe XD, Adobe Premiere Pro, After Effects</dd></div>
+      <div class="wrap"><div class="section-head"><h2 class="heading-with-icon" id="skills-title"><img src="assets/icons/dotnet.svg" alt="" width="32" height="32" loading="lazy"><span data-i18n="skills.title">Development tools.</span></h2><p><span data-i18n="skills.lead">Technologies I use across backend, web, mobile, and automation work.</span></p></div><dl class="skill-list">
+          <div><dt><span data-i18n="skills.backend">Backend &amp; desktop</span></dt><dd>C#, .NET, ASP.NET Core, Node.js, RESTful APIs, LINQ, JSP, VB.NET</dd></div>
+          <div><dt><span data-i18n="skills.web">Web &amp; mobile</span></dt><dd>HTML, CSS, JavaScript, PHP, Laravel, CodeIgniter, React Native, Android Studio, Kotlin, Java</dd></div>
+          <div><dt><span data-i18n="skills.data">Data &amp; delivery</span></dt><dd>SQL Server, Oracle, Azure DevOps, CI/CD</dd></div>
+          <div><dt><span data-i18n="skills.integration">Integration &amp; automation</span></dt><dd>SharePoint SPFx web parts, Power Automate</dd></div>
+          <div><dt><span data-i18n="skills.design">Design &amp; video</span></dt><dd>Figma, Adobe XD, Adobe Premiere Pro, After Effects</dd></div>
         </dl></div>
     </section>
   </main>
   <footer class="closing site-footer" id="kontak" aria-labelledby="contact-title">
     <div class="wrap">
-      <div class="closing__cta close--type"><div class="section-head"><h2 id="contact-title">Discuss your next project.</h2><p>For development work, collaboration, or a role on your team.</p></div><a class="btn btn--primary btn--xl" href="https://wa.me/6285263676114" target="_blank" rel="noopener noreferrer">Contact me <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      <div class="closing__cta close--type"><div class="section-head"><h2 id="contact-title"><span data-i18n="contact.title">Discuss your next project.</span></h2><p><span data-i18n="contact.lead">For development work, collaboration, or a role on your team.</span></p></div><a class="btn btn--primary btn--xl" href="https://wa.me/6285263676114" target="_blank" rel="noopener noreferrer"><span data-i18n="nav.contact">Contact me</span> <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
       <div class="closing__links">
-        <div class="grid"><div class="span-6"><a class="nav__logo wordmark" href="#beranda">mfa<span aria-hidden="true">.</span></a><p class="footer__lede">Muhammad Fajri Afriyansyah<br>Web &amp; backend developer</p></div><nav class="span-3" aria-label="Portfolio"><h3>Portfolio</h3><a href="#Portofolio">Projects</a><a href="#Pengalaman">Experience</a><a href="#github-activity">GitHub activity</a></nav><nav class="span-3" aria-label="Social links"><h3>Connect</h3><a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.instagram.com/fajriafriyansyah_/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://drive.google.com/file/d/14Orkk6A2kyfuqf324RaOSWrizDXLDgJE/view?usp=sharing" target="_blank" rel="noopener noreferrer">View CV</a></nav></div>
-        <div class="legal"><p>© 2026 Muhammad Fajri Afriyansyah</p><a href="#beranda">Back to top <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
-        <a class="icon-credit" href="assets/icons/icons-credits.json" target="_blank" rel="noopener noreferrer">Product names and logos are trademarks of their owners.</a>
+        <div class="grid"><div class="span-6"><a class="nav__logo wordmark" href="#beranda">mfa<span aria-hidden="true">.</span></a><p class="footer__lede">Muhammad Fajri Afriyansyah<br><span data-i18n="footer.role">Web &amp; backend developer</span></p></div><nav class="span-3" aria-label="Portfolio" data-i18n-aria-label="footer.portfolio"><h3><span data-i18n="footer.portfolio">Portfolio</span></h3><a href="#Portofolio"><span data-i18n="nav.projects">Projects</span></a><a href="#Pengalaman"><span data-i18n="nav.experience">Experience</span></a><a href="#github-activity"><span data-i18n="footer.github">GitHub activity</span></a></nav><nav class="span-3" aria-label="Social links" data-i18n-aria-label="footer.social"><h3><span data-i18n="footer.connect">Connect</span></h3><a href="https://www.linkedin.com/in/muhammad-fajri-afriyansyah" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.instagram.com/fajriafriyansyah_/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://drive.google.com/file/d/14Orkk6A2kyfuqf324RaOSWrizDXLDgJE/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span data-i18n="footer.cv">View CV</span></a></nav></div>
+        <div class="legal"><p>© 2026 Muhammad Fajri Afriyansyah</p><a href="#beranda"><span data-i18n="footer.top">Back to top</span> <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+        <a class="icon-credit" href="assets/icons/icons-credits.json" target="_blank" rel="noopener noreferrer"><span data-i18n="footer.credit">Product names and logos are trademarks of their owners.</span></a>
       </div>
     </div>
   </footer>

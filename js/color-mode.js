@@ -18,8 +18,9 @@
     themeColor.setAttribute('content', theme === 'dark' ? '#101216' : '#eef0f3');
     if (themeButton) {
       const nextMode = theme === 'dark' ? 'light' : 'dark';
-      themeButton.setAttribute('aria-label', `Switch to ${nextMode} mode`);
-      themeButton.querySelector('.theme-label').textContent = `${nextMode === 'dark' ? 'Dark' : 'Light'} mode`;
+      const i18n = window.portfolioI18n;
+      themeButton.setAttribute('aria-label', i18n ? i18n.t(`theme.${nextMode}Action`) : `Switch to ${nextMode} mode`);
+      themeButton.querySelector('.theme-label').textContent = i18n ? i18n.t(`theme.${nextMode}`) : `${nextMode === 'dark' ? 'Dark' : 'Light'} mode`;
     }
   }
 
@@ -44,4 +45,5 @@
       }
     });
   });
+  document.addEventListener('languagechange', () => applyTheme(root.dataset.theme));
 })();

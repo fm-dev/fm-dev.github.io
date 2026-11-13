@@ -7,13 +7,22 @@
   const detail = section.querySelector('.contribution-detail');
   const yearSelect = section.querySelector('#contribution-year');
   const retry = section.querySelector('.contribution-retry');
-  const dateFormat = new Intl.DateTimeFormat('en', { dateStyle: 'long', timeZone: 'UTC' });
-  const monthFormat = new Intl.DateTimeFormat('en', { month: 'short', timeZone: 'UTC' });
+  const i18n = window.portfolioI18n;
+  const t = i18n.t;
   const dayLength = 86400000;
   let contributions = [];
   let dayButtons = [];
+  let state = 'loading';
+
+  function updateStatus() {
+    status.textContent = t(state === 'error' ? 'github.error' : 'github.loading');
+  }
 
   function renderCalendar() {
+    const locale = i18n.language;
+    const dateFormat = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' });
+    const monthFormat = new Intl.DateTimeFormat(locale, { month: 'short', timeZone: 'UTC' });
+    const weekdayFormat = new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' });
     const now = new Date();
     const today = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
     const start = new Date(today);
@@ -31,7 +40,11 @@
     if (!days.length) throw new Error('No contribution data for this period');
     const byDate = new Map(days.map(day => [day.date, day]));
     const total = days.reduce((sum, day) => sum + day.count, 0);
-    summary.textContent = `${total.toLocaleString('en')} ${total === 1 ? 'contribution' : 'contributions'} ${yearSelect.value === 'last' ? 'in the last 12 months' : `in ${yearSelect.value}`}`;
+    summary.textContent = t('github.total', {
+      count: total.toLocaleString(locale),
+      contributions: total === 1 ? 'contribution' : 'contributions',
+      period: yearSelect.value === 'last' ? t('github.lastPeriod') : t('github.yearPeriod', { year: yearSelect.value })
+    });
 
     const offset = start.getUTCDay();
     const dayCount = Math.round((end - start) / dayLength) + 1;
@@ -40,7 +53,7 @@
     table.className = 'contribution-table';
     const caption = table.createCaption();
     caption.className = 'visually-hidden';
-    caption.textContent = `${summary.textContent}. Use arrow keys to explore days.`;
+    caption.textContent = `${summary.textContent}. ${t('github.keyboard')}`;
     const heading = table.createTHead().insertRow();
     heading.append(document.createElement('td'));
     let previousMonth;
@@ -65,7 +78,7 @@
       const label = document.createElement('th');
       label.scope = 'row';
       const name = document.createElement('span');
-      name.textContent = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][weekday];
+      name.textContent = weekdayFormat.format(new Date(Date.UTC(2024, 0, 7 + weekday)));
       if (weekday % 2 === 0) name.className = 'visually-hidden';
       label.append(name);
       row.append(label);
@@ -84,7 +97,11 @@
         button.dataset.level = day.level;
         button.dataset.date = key;
         button.tabIndex = -1;
-        button.setAttribute('aria-label', `${day.count === 0 ? 'No' : day.count} ${day.count === 1 ? 'contribution' : 'contributions'} on ${dateFormat.format(date)}`);
+        button.setAttribute('aria-label', t('github.day', {
+          count: day.count === 0 && locale === 'en' ? 'No' : day.count.toLocaleString(locale),
+          contributions: day.count === 1 ? 'contribution' : 'contributions',
+          date: dateFormat.format(date)
+        }));
         button.title = button.getAttribute('aria-label');
         cell.append(button);
         buttonsByDate.set(key, button);
@@ -94,7 +111,7 @@
     dayButtons[0].tabIndex = 0;
     calendar.replaceChildren(table);
     chart.hidden = false;
-    detail.textContent = 'Hover, tap, or use arrow keys to explore contributions.';
+    detail.textContent = t('github.hint');
     calendar.scrollLeft = yearSelect.value === 'last' ? calendar.scrollWidth : 0;
   }
 
@@ -117,9 +134,10 @@
   });
 
   async function loadContributions() {
+    state = 'loading';
     section.setAttribute('aria-busy', 'true');
     status.hidden = false;
-    status.textContent = 'Loading GitHub contributions…';
+    updateStatus();
     retry.hidden = true;
     yearSelect.disabled = true;
     chart.hidden = true;
@@ -136,12 +154,14 @@
       )) throw new Error('Invalid contribution data');
       contributions = data.contributions.sort((a, b) => a.date.localeCompare(b.date));
       const years = [...new Set(contributions.map(day => day.date.slice(0, 4)))].sort().reverse();
-      yearSelect.replaceChildren(new Option('Last 12 months', 'last'), ...years.map(year => new Option(year, year)));
+      yearSelect.replaceChildren(new Option(t('github.last'), 'last'), ...years.map(year => new Option(year, year)));
       renderCalendar();
+      state = 'ready';
       status.hidden = true;
       yearSelect.disabled = false;
     } catch {
-      status.textContent = 'GitHub activity is unavailable right now. Please try again or view my GitHub profile.';
+      state = 'error';
+      updateStatus();
       retry.hidden = false;
     } finally {
       section.setAttribute('aria-busy', 'false');
@@ -149,5 +169,10 @@
   }
   yearSelect.addEventListener('change', renderCalendar);
   retry.addEventListener('click', loadContributions);
+  document.addEventListener('languagechange', () => {
+    yearSelect.options[0].textContent = t('github.last');
+    if (state === 'ready') renderCalendar();
+    else updateStatus();
+  });
   loadContributions();
 })();
